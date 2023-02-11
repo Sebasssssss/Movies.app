@@ -12,7 +12,7 @@ export default function Movies({
 }) {
   return (
     <>
-      <li className="w-[250px] h-[350px] group grid place-items-center relative shadow-lg transition duration-500 ease-out hover:translate-y-[5%] before:content-[''] before:w-full before:h-full before:z-20 before:transition before:duration-500 hover:before:opacity-100">
+      <li className="w-[150px] h-[250px] group grid place-items-center overflow-hidden relative shadow-lg transition duration-500 ease-out hover:translate-y-[5%] before:content-[''] before:w-full before:h-full before:z-20 before:transition before:duration-500 hover:before:opacity-100 rounded-[1rem]">
         <div key={id}>
           <Image
             src={`https://image.tmdb.org/t/p/w500${poster_path}`}
@@ -20,7 +20,7 @@ export default function Movies({
             alt={title}
             fill
           />
-          <div className="z-30 text-white opacity-0 translate-y-[50%] transition duration-500 group-hover:opacity-100 group-hover:translate-y-11 text-left flex flex-col w-full h-full px-6 py-2 bg-slate-900/70">
+          <div className="z-30 text-white opacity-0 translate-y-[50%] transition duration-500 group-hover:opacity-100 group-hover:translate-y-12 text-left flex flex-col w-[300px] h-full px-6 py-2 bg-slate-900/70">
             <h1 className="text-md w-full py-1.5 font-bold">{title}</h1>
             <h1 className="text-sm w-full py-1.5 inline-flex items-center gap-1">
               Release date <FiChevronRight className="mt-0.5" /> {release_date}
