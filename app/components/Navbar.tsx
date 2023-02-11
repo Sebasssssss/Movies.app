@@ -1,5 +1,5 @@
-import { FiSearch } from 'react-icons/fi'
 import { IoChevronBack } from 'react-icons/io5'
+import SearchForm from './SearchForm'
 
 export default function Navbar() {
   return (
@@ -8,13 +8,7 @@ export default function Navbar() {
         <IoChevronBack />
         Back
       </div>
-      <form className="inline-flex items-center gap-2">
-        <FiSearch />
-        <input
-          placeholder="Search Movie"
-          className="bg-transparent outline-none"
-        />
-      </form>
+      <SearchForm />
       <button className="px-5 py-1 border border-white rounded-xl">
         Sign up
       </button>

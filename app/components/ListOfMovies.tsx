@@ -1,21 +1,32 @@
+'use client'
+import { useMovies } from '../hooks/useMovies'
 import Movies from './Movies'
 
-export default function ListOfMovies({ movies }) {
+interface Props {
+  adult?: string
+  id: string
+  title: string
+  poster_path: string
+  release_date?: string
+  popularity: string
+}
+
+export default function ListOfMovies() {
+  const { movies } = useMovies()
+
   return (
     <div className="w-full flex flex-wrap gap-5">
-      {movies.map(
-        ({ adult, id, title, poster_path, release_date, popularity }) => (
-          <Movies
-            key={id}
-            adult={adult}
-            id={id}
-            title={title}
-            poster_path={poster_path}
-            release_date={release_date}
-            popularity={popularity}
-          />
-        )
-      )}
+      {movies.map((props: Props) => (
+        <Movies
+          key={props.id}
+          adult={props.adult}
+          id={props.id}
+          title={props.title}
+          poster_path={props.poster_path}
+          release_date={props.release_date}
+          popularity={props.popularity}
+        />
+      ))}
     </div>
   )
 }
