@@ -1,41 +1,39 @@
 import Image from 'next/image'
+import { FiChevronRight } from 'react-icons/fi'
+import { IoStar, IoStarHalf } from 'react-icons/io5'
 
 export default function Movies({
   adult,
   id,
   title,
-  overview,
   poster_path,
   release_date,
   popularity
 }) {
   return (
     <>
-      <li className="w-[190px] h-[254px] group relative flex p-[1.9rem] shadow-lg transition duration-500 ease-out overflow-hidden hover:translate-y-[5%]">
+      <li className="w-[250px] h-[350px] group grid place-items-center relative shadow-lg transition duration-500 ease-out hover:translate-y-[5%] before:content-[''] before:w-full before:h-full before:z-20 before:transition before:duration-500 hover:before:opacity-100">
         <div key={id}>
           <Image
             src={`https://image.tmdb.org/t/p/w500${poster_path}`}
-            className="h-full w-full object-cover rounded-[1rem]"
+            className="rounded-[1rem]"
             alt={title}
-            width="200"
-            height="200"
+            fill
           />
-          <div className="hidden group-hover:flex group-hover:flex-col absolute bottom-0 group-hover:-translate-y-[5%] transition-transform duration-500 ease-out">
-            <h1 className="text-md w-full bg-slate-900/40 py-1.5 font-bold backdrop-blur-sm">
-              {title}
+          <div className="z-30 text-white opacity-0 translate-y-[50%] transition duration-500 group-hover:opacity-100 group-hover:translate-y-11 text-left flex flex-col w-full h-full px-6 py-2 bg-slate-900/70">
+            <h1 className="text-md w-full py-1.5 font-bold">{title}</h1>
+            <h1 className="text-sm w-full py-1.5 inline-flex items-center gap-1">
+              Release date <FiChevronRight className="mt-0.5" /> {release_date}
             </h1>
-            <h1 className="text-sm w-full bg-slate-900/40 py-1.5 font-bold backdrop-blur-sm">
-              {overview}
-            </h1>
-            <h1 className="text-sm w-full bg-slate-900/40 py-1.5 font-bold backdrop-blur-sm">
-              {popularity}
-            </h1>
-            <h1 className="text-sm w-full bg-slate-900/40 py-1.5 font-bold backdrop-blur-sm">
-              {adult}
-            </h1>
-            <h1 className="text-sm w-full bg-slate-900/40 py-1.5 font-bold backdrop-blur-sm">
-              {release_date}
-            </h1>
+            <h1 className="text-sm w-full py-1.5">{popularity}</h1>
+            <h1 className="text-sm w-full py-1.5">{adult}</h1>
+            <div className="inline-flex items-center gap-1">
+              <IoStar className="fill-yellow-500" />
+              <IoStar className="fill-yellow-500" />
+              <IoStar className="fill-yellow-500" />
+              <IoStar className="fill-yellow-500" />
+              <IoStarHalf className="fill-yellow-500" />
+            </div>
           </div>
         </div>
       </li>
