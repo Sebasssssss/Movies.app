@@ -1,7 +1,8 @@
+import Navbar from './components/Navbar'
 import './globals.css'
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {
@@ -12,7 +13,10 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body className="bg-black text-white">
+        <Navbar />
+        <div className="max-w-[1200px] mx-auto">{children}</div>
+      </body>
     </html>
   )
 }
