@@ -1,5 +1,3 @@
-'use client'
-import { useMovies } from '../hooks/useMovies'
 import Movies from './Movies'
 
 interface Props {
@@ -11,9 +9,7 @@ interface Props {
   popularity: string
 }
 
-export default function ListOfMovies() {
-  const { movies } = useMovies()
-
+export default function ListOfMovies({ movies }) {
   return (
     <div className="w-full flex flex-wrap gap-5">
       {movies.map((props: Props) => (
