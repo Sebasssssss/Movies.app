@@ -9,7 +9,7 @@ export default function SearchForm() {
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
-    router.push(`/pages/results/${keyword}`)
+    router.push(`/pages/search/${keyword}`)
   }
 
   const handleChange = (e: any) => {
