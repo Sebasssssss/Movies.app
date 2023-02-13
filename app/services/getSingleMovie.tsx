@@ -6,10 +6,8 @@ const dataFromApi = (apiResponse: any) => {
   return { runtime, title, poster_path, overview, release_date }
 }
 
-export default async function getSingleMovie({ id }: any) {
-  const apiUrl = `${API_URL}/movie/${id}?api_key=${API_KEY}&language=en-US`
-
-  return fetch(apiUrl)
+export default async function getSingleMovie({ id }) {
+  return fetch(`${API_URL}/movie/${id}?api_key=${API_KEY}&language=en-US`)
     .then(res => res.json())
     .then(dataFromApi)
 }

@@ -1,25 +1,21 @@
 'use client'
 import { useEffect, useState } from 'react'
 import getSingleMovie from '../services/getSingleMovie'
-import { useMovies } from './useMovies'
 
 export default function useSingleMovie({ id }) {
-  const { movies } = useMovies()
   const [singleMovie, setSingleMovie] = useState([])
 
   useEffect(
     function () {
-      if (!movies) {
-        getSingleMovie({ id })
-          .then((movie: any) => {
-            setSingleMovie(movie)
-          })
-          .catch(err => {
-            console.log(err)
-          })
-      }
+      getSingleMovie({ id })
+        .then((movie: any) => {
+          setSingleMovie(movie)
+        })
+        .catch(err => {
+          console.log(err)
+        })
     },
-    [id, movies]
+    [id, singleMovie]
   )
   const hoursConvert = (num: number) => {
     let hours = Math.floor(num / 60)
