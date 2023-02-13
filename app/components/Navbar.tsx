@@ -4,7 +4,7 @@ import SearchForm from './SearchForm'
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between p-2">
+    <nav className="flex justify-between p-2 absolute top-0 w-full">
       <Link href="/" className="inline-flex items-center gap-2 text-sm">
         <IoChevronBack />
         Back

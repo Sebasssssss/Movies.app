@@ -11,7 +11,7 @@ interface Props {
 
 export default function ListOfMovies({ movies }) {
   return (
-    <div className="w-full flex flex-wrap gap-5">
+    <div className="w-full flex flex-wrap gap-8">
       {movies.map((props: Props) => (
         <Movies
           key={props.id}

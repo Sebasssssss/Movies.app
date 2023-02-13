@@ -1,19 +1,19 @@
-import { api_url, api_key } from './settings'
+import { API_URL, API_KEY } from './settings'
 
 export default async function searchMovies({ keyword }: any = {}) {
-  const apiUrl = `${api_url}/search/movie?api_key=${api_key}&language=en-US&page=1&include_adult=false&query=${keyword}`
+  const apiUrl = `${API_URL}/search/movie?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&query=${keyword}`
 
   return fetch(apiUrl)
     .then(res => res.json())
     .then(response => {
       const { results = [] } = response
       const movies = results.map((movie: any) => {
-        const { adult, id, title, poster_path, release_date, popularity } =
+        const { id, runtime, title, poster_path, release_date, popularity } =
           movie
         return {
-          adult,
           id,
           title,
+          runtime,
           poster_path,
           release_date,
           popularity
