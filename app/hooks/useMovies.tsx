@@ -1,8 +1,8 @@
 'use client'
 import { useState, useEffect } from 'react'
-import getMovies from '../services/getMovies'
+import getMovies from 'services/getMovies'
 
-export function useMovies() {
+export function useMovies(): {} {
   const [movies, setMovies] = useState([])
 
   useEffect(

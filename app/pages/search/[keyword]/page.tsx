@@ -1,6 +1,6 @@
 'use client'
-import { useSearch } from '@/app/hooks/useSearch'
-import ListOfMovies from '../../../components/ListOfMovies'
+import { useSearch } from 'hooks/useSearch'
+import ListOfMovies from 'components/ListOfMovies'
 
 export default function Page({ params }) {
   const { keyword } = params

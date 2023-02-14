@@ -1,14 +1,14 @@
 'use client'
 import { useEffect, useState } from 'react'
-import getSingleMovie from '../services/getSingleMovie'
+import getSingleMovie from 'services/getSingleMovie'
 
-export default function useSingleMovie({ id }) {
+export function useSingleMovie({ id }): {} {
   const [singleMovie, setSingleMovie] = useState([])
 
   useEffect(
     function () {
       getSingleMovie({ id })
-        .then((movie: any) => {
+        .then(movie => {
           setSingleMovie(movie)
         })
         .catch(err => {
@@ -17,11 +17,12 @@ export default function useSingleMovie({ id }) {
     },
     [id, singleMovie]
   )
-  const hoursConvert = (num: number) => {
-    let hours = Math.floor(num / 60)
-    let minutes = num % 60
-    return hours + 'h' + ' : ' + minutes + 'min'
-  }
 
-  return { singleMovie, hoursConvert }
+  return { singleMovie }
+}
+
+export const hoursConvert = (num: number) => {
+  let hours = Math.floor(num / 60)
+  let minutes = num % 60
+  return hours + 'h' + ' ' + minutes + 'min'
 }

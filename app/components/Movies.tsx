@@ -5,11 +5,11 @@ import { IoStar, IoStarHalf } from 'react-icons/io5'
 
 interface Props {
   adult?: string
-  id: string
+  id: number
   title: string
   poster_path: string
   release_date?: string
-  popularity: string
+  popularity?: string
 }
 
 export default function Movies({
@@ -42,7 +42,7 @@ export default function Movies({
               Release date <FiChevronRight className="mt-0.5" /> {release_date}
             </h1>
             <h1 className="text-sm w-full py-1.5">{popularity}</h1>
-            <h1 className="text-sm w-full py-1.5">{adult}</h1>
+            <h1 className="text-sm w-full py-1.5">{adult ? '+18' : '+13'}</h1>
             <div className="inline-flex items-center gap-1">
               <IoStar className="fill-yellow-500" />
               <IoStar className="fill-yellow-500" />

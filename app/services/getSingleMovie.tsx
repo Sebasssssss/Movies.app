@@ -1,13 +1,21 @@
-import { API_URL, API_KEY } from '../services/settings'
+import { API_URL, API_KEY } from 'services/settings'
 
-const dataFromApi = (apiResponse: any) => {
-  const { results } = apiResponse
-  const { runtime, title, poster_path, overview, release_date } = results
-  return { runtime, title, poster_path, overview, release_date }
+interface Response {
+  id: number
+  title: string
+  poster_path: string
+  release_date?: string
+  overview?: string
+  runtime?: number
+}
+
+const fetchSingleMovie = async (id: number) => {
+  const apiUrl = `${API_URL}/movie/${id}?api_key=${API_KEY}&language=en-US`
+  return fetch(apiUrl).then(res => res.json())
 }
 
 export default async function getSingleMovie({ id }) {
-  return fetch(`${API_URL}/movie/${id}?api_key=${API_KEY}&language=en-US`)
-    .then(res => res.json())
-    .then(dataFromApi)
+  const { runtime, title, poster_path, overview, release_date }: Response =
+    await fetchSingleMovie(id)
+  return { runtime, title, poster_path, overview, release_date }
 }
