@@ -54,7 +54,9 @@ export default function Page({ params }) {
             />
           </div>
         </div>
-        <div className="grid">
+      </div>
+      <div className='className="grid w-full bg-gradient-to-t from-black/90 to-black/0'>
+        <div className="max-w-[1200px] mx-auto py-5">
           <ListOfMovies movies={similar} />
         </div>
       </div>
