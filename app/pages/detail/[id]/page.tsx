@@ -1,13 +1,16 @@
 'use client'
 import Image from 'next/image'
+import ListOfMovies from '@/components/ListOfMovies'
 import { IoStar, IoStarHalf } from 'react-icons/io5'
 import { Inter } from '@next/font/google'
 import { hoursConvert, useSingleMovie } from '@/hooks/useSingleMovie'
+import { useSimilarMovie } from '@/hooks/useSimilarMovie'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Page({ params }) {
   const { singleMovie } = useSingleMovie({ id: params.id })
+  const { similar } = useSimilarMovie({ id: params.id })
 
   return (
     <main className="w-full h-screen">
@@ -28,7 +31,7 @@ export default function Page({ params }) {
             <h1 className={`${inter.className} text-sm`}>
               {singleMovie.overview}
             </h1>
-            <h1 className="text-sm">{hoursConvert(singleMovie.runtime)}</h1>
+            <h1 className="text-lg">{hoursConvert(singleMovie.runtime)}</h1>
             <h1 className="text-sm">{singleMovie.release_date}</h1>
             <div className="inline-flex items-center gap-1">
               <IoStar className="fill-yellow-500" />
@@ -41,15 +44,18 @@ export default function Page({ params }) {
               Watch
             </button>
           </div>
-          <div className="w-[270px] h-[350px]">
+          <div className="w-[370px] h-[520px] overflow-hidden shadow-2xl shadow-black">
             <Image
               src={`https://image.tmdb.org/t/p/w500${singleMovie.poster_path}`}
-              className="rounded-sm shadow-2xl"
               alt={singleMovie.title}
-              width="270"
-              height="350"
+              width="370"
+              height="450"
+              style={{ objectFit: 'cover' }}
             />
           </div>
+        </div>
+        <div className="grid">
+          <ListOfMovies movies={similar} />
         </div>
       </div>
     </main>

@@ -7,9 +7,7 @@ export function useMovies(): {} {
 
   useEffect(
     function () {
-      getMovies().then(movie => {
-        setMovies(movie)
-      })
+      getMovies().then(movie => setMovies(movie))
     },
     [setMovies]
   )

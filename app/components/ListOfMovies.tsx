@@ -1,18 +1,10 @@
 import Movies from './Movies'
-
-interface Props {
-  adult?: string
-  id: string
-  title: string
-  poster_path: string
-  release_date?: string
-  popularity: string
-}
+import { apiTypes } from 'interfaces/movie'
 
 export default function ListOfMovies({ movies }) {
   return (
-    <div className="w-full flex flex-wrap gap-8">
-      {movies.map((props: Props) => (
+    <div className="w-full grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8">
+      {movies.map((props: apiTypes) => (
         <Movies
           key={props.id}
           adult={props.adult}

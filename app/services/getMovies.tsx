@@ -7,7 +7,7 @@ export default async function getMovies() {
     .then(res => res.json())
     .then(response => {
       const { results = [] } = response
-      const movies = results.map((movie: any) => {
+      const movies = results.map(movie => {
         const { adult, id, title, poster_path, release_date, popularity } =
           movie
         return {

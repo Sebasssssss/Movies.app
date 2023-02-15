@@ -8,12 +8,8 @@ export function useSingleMovie({ id }): {} {
   useEffect(
     function () {
       getSingleMovie({ id })
-        .then(movie => {
-          setSingleMovie(movie)
-        })
-        .catch(err => {
-          console.log(err)
-        })
+        .then(movie => setSingleMovie(movie))
+        .catch(err => console.log(err))
     },
     [id, singleMovie]
   )
