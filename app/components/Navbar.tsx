@@ -1,18 +1,22 @@
 import Link from 'next/link'
-import { IoChevronBack } from 'react-icons/io5'
+import { IoHome } from 'react-icons/io5'
 import SearchForm from './SearchForm'
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between p-2 absolute top-0 w-full">
-      <Link href="/" className="inline-flex items-center gap-2 text-sm">
-        <IoChevronBack />
-        Back
-      </Link>
-      <SearchForm />
-      <button className="px-5 py-1 border border-white rounded-xl">
-        Sign up
-      </button>
-    </nav>
+    <header className="w-full absolute top-2">
+      <nav className="flex justify-between p-4 container bg-[#19191e] mx-auto rounded-[1rem] shadow-xl">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-md font-semibold border-2 border-[#58586a] px-2 rounded-full"
+        >
+          <IoHome className="fill-[#58586a]" />
+        </Link>
+        <SearchForm />
+        <button className="px-5 py-1 border-2 rounded-xl text-[##58586a] border-[#58586a]">
+          Sign up
+        </button>
+      </nav>
+    </header>
   )
 }
