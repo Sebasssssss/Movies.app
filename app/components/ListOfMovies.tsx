@@ -1,5 +1,5 @@
-import Movies from './Movies'
 import { apiTypes } from 'interfaces/movie'
+import Movies from './Movie'
 
 export default function ListOfMovies({ movies }) {
   return (

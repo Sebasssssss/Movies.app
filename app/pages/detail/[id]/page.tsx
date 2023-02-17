@@ -13,7 +13,7 @@ export default function Page({ params }) {
   const { similar } = useSimilarMovie({ id: params.id })
 
   return (
-    <main className="w-full h-screen">
+    <main className="w-full h-full">
       <div className="w-full h-full fixed -z-10">
         <Image
           src={`https://image.tmdb.org/t/p/w500${singleMovie.poster_path}`}

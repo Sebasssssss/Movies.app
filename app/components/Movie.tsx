@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FiChevronRight } from 'react-icons/fi'
 import { IoStar, IoStarHalf } from 'react-icons/io5'
 import { apiTypes } from 'interfaces/movie'
 
