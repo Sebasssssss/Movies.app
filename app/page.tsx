@@ -3,9 +3,9 @@ import ListOfMovies from './components/ListOfMovies'
 import { useMovies } from './hooks/useMovies'
 import './globals.css'
 import { IoAdd, IoPlay, IoStar } from 'react-icons/io5'
-import { Inter } from '@next/font/google'
+import { Rubik } from '@next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const rubik = Rubik({ subsets: ['latin'] })
 
 export default function Home() {
   const { movies } = useMovies()
@@ -18,10 +18,8 @@ export default function Home() {
               <h1 className="flex items-center gap-1">
                 <IoStar className="fill-yellow-500" /> 7.5
               </h1>
-              <h1 className={`${inter.className} text-7xl font-semibold`}>
-                Peaky Blinders
-              </h1>
-              <p className={`${inter.className} text-md`}>
+              <h1 className={`${rubik.className} text-7xl`}>Peaky Blinders</h1>
+              <p className={`${rubik.className} text-md`}>
                 A gangster family epic set in 1900s England, centering on a gang
                 who sew razor blades in the peaks of their caps, and their
                 fierce boss Tommy Shelby. Thomas Shelby and his brothers return
@@ -40,7 +38,7 @@ export default function Home() {
         </div>
       </main>
       <div className="max-w-[1200px] mx-auto p-4">
-        <h1 className={`${inter.className} text-xl font-semibold py-5`}>
+        <h1 className={`${rubik.className} text-xl font-semibold py-5`}>
           Popular movies
         </h1>
         <ListOfMovies movies={movies} />

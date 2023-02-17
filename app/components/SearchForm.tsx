@@ -19,16 +19,16 @@ export default function SearchForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="inline-flex items-center gap-2 text-black/50 relative"
+      className="inline-flex items-center gap-2 relative"
     >
       <input
         placeholder="Search Movie"
         onChange={handleChange}
         value={keyword}
-        className="bg-[#e9ecf7] w-full rounded-full px-4 py-1 outline-none placeholder:text-black/50 focus:outline-none focus:ring-2 focus:ring-red-700 focus:ring-offset-2 focus:ring-offset-gray-100 transition-all"
+        className="bg-transparent border-2 border-[#58586a] w-full rounded-full px-4 py-1 outline-none placeholder:text-[#58586a] focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 focus:ring-offset-gray-100 transition-all"
       />
       <button type="submit" className="absolute right-3">
-        <FiSearch />
+        <FiSearch className="text-[#58586a]" />
       </button>
     </form>
   )

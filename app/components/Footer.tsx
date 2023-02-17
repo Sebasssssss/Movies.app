@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import avatarImage from '../../public/avatar.jpg'
+import { Rubik } from '@next/font/google'
+
+const rubik = Rubik({ subsets: ['latin'] })
 
 export default function Footer() {
   return (
@@ -16,14 +19,14 @@ export default function Footer() {
                 height="50"
               />
             </div>
-            <h1 className="text-lg">Sebass</h1>
+            <h1 className={`${rubik.className} text-lg`}>Sebass</h1>
           </div>
           <h1 className="opacity-70">
             Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod
             tempor incidunt ut labore et.
           </h1>
         </div>
-        <div className="uppercase inline-flex gap-4">
+        <div className={`${rubik.className} uppercase inline-flex gap-4`}>
           <Link href="https://github.com/Sebasssssss/Movies.app">source</Link>
           <h1>email</h1>
           <Link href="https://github.com/Sebasssssss">github</Link>
