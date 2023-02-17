@@ -11,7 +11,7 @@ export function useSingleMovie({ id }): {} {
         .then(movie => setSingleMovie(movie))
         .catch(err => console.log(err))
     },
-    [id, singleMovie]
+    [id]
   )
 
   return { singleMovie }

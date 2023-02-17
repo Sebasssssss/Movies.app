@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import searchMovies from 'services/searchMovies'
 
-export function useSearch({ keyword }): {} {
+export function useSearch({ keyword }) {
   const [movies, setMovies] = useState([])
 
   useEffect(
