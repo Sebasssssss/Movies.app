@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <main className="h-[100vh] grid items-center w-full bg-[url('../public/homepage.jpg')] bg-cover bg-center">
-        <div className="w-full h-[100vh] bg-black/50">
+        <div className="w-full h-[100vh] bg-black/50 bg-gradient-to-t from-[#060606] to-transparent">
           <div className="max-w-[1200px] mx-auto w-full h-[100vh] grid items-center">
             <div className="text-justify grid gap-5 w-[700px] p-10">
               <h1 className="flex items-center gap-1">

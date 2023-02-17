@@ -1,3 +1,4 @@
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import './globals.css'
 
@@ -13,9 +14,10 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="bg-[#16151a] text-white">
+      <body className="bg-[#060606] text-white">
         <Navbar />
         <div>{children}</div>
+        <Footer />
       </body>
     </html>
   )
