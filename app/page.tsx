@@ -14,14 +14,14 @@ export default function Home() {
       <main className="h-[100vh] grid items-center w-full bg-[url('../public/homepage.jpg')] bg-cover bg-center">
         <div className="w-full h-[100vh] bg-black/50">
           <div className="max-w-[1200px] mx-auto w-full h-[100vh] grid items-center">
-            <div className="text-justify grid gap-5 w-96">
+            <div className="text-justify grid gap-5 w-[700px] p-10">
               <h1 className="flex items-center gap-1">
                 <IoStar className="fill-yellow-500" /> 7.5
               </h1>
-              <h1 className={`${inter.className} text-4xl font-semibold`}>
+              <h1 className={`${inter.className} text-7xl font-semibold`}>
                 Peaky Blinders
               </h1>
-              <p className={`${inter.className} text-sm`}>
+              <p className={`${inter.className} text-md`}>
                 A gangster family epic set in 1900s England, centering on a gang
                 who sew razor blades in the peaks of their caps, and their
                 fierce boss Tommy Shelby. Thomas Shelby and his brothers return
@@ -40,6 +40,9 @@ export default function Home() {
         </div>
       </main>
       <div className="max-w-[1200px] mx-auto p-4">
+        <h1 className={`${inter.className} text-xl font-semibold py-5`}>
+          Popular movies
+        </h1>
         <ListOfMovies movies={movies} />
       </div>
     </>
