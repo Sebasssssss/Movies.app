@@ -20,20 +20,24 @@ export default function Carousel() {
       navigation={true}
       modules={[Pagination, Navigation]}
       breakpoints={{
-        '@0.00': {
+        '320': {
           slidesPerView: 2,
           spaceBetween: 10
         },
-        '@0.75': {
-          slidesPerView: 3,
+        '640': {
+          slidesPerView: 4,
           spaceBetween: 20
         },
-        '@1.00': {
-          slidesPerView: 4,
+        '1000': {
+          slidesPerView: 5,
           spaceBetween: 40
         },
-        '@1.50': {
-          slidesPerView: 5,
+        '1250': {
+          slidesPerView: 7,
+          spaceBetween: 50
+        },
+        '1420': {
+          slidesPerView: 9,
           spaceBetween: 50
         }
       }}

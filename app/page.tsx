@@ -38,7 +38,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <div className="max-w-[1200px] mx-auto p-4">
+      <div className="w-full p-4">
         <h1 className={`${rubik.className} text-xl font-semibold py-5`}>
           Popular movies
         </h1>
