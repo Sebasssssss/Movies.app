@@ -4,6 +4,7 @@ import { useMovies } from './hooks/useMovies'
 import './globals.css'
 import { IoAdd, IoPlay, IoStar } from 'react-icons/io5'
 import { Rubik } from '@next/font/google'
+import Carousel from './components/Carousel'
 
 const rubik = Rubik({ subsets: ['latin'] })
 
@@ -41,6 +42,7 @@ export default function Home() {
         <h1 className={`${rubik.className} text-xl font-semibold py-5`}>
           Popular movies
         </h1>
+        <Carousel />
         <ListOfMovies movies={movies} />
       </div>
     </>

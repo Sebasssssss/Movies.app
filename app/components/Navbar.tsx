@@ -4,7 +4,7 @@ import { IoHome } from 'react-icons/io5'
 
 export default function Navbar() {
   return (
-    <header className="absolute w-full bg-[#0e0e10]/50 backdrop-blur-md">
+    <header className="absolute top-0 w-full bg-[#0e0e10]/50 backdrop-blur-md">
       <nav className="justify-between p-4 max-w-[1200px] mx-auto flex">
         <Link
           href="/"
