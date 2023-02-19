@@ -7,6 +7,7 @@ import 'swiper/css/navigation'
 export default function Carousel({ children }) {
   return (
     <Swiper
+      direction="horizontal"
       loop={true}
       pagination={{
         clickable: true

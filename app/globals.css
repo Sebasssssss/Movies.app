@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --swiper-theme-color: #f8ede3;
+}
+
+.swiper-pagination-bullets {
+  display: none;
+}
