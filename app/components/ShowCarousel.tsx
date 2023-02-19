@@ -1,17 +1,17 @@
 'use client'
-import Movies from './Movie'
-import Carousel from './Carousel'
+import Shows from './TvShows'
+import Carousel from 'components/Carousel'
 import { SwiperSlide } from 'swiper/react'
-import { useMovies } from '@/hooks/useMovies'
 import { apiTypes } from 'interfaces/movie'
+import useShows from 'hooks/useShows'
 
-export default function TrendingCarousel() {
-  const { movies } = useMovies({ category: 'top_rated' })
+export default function ShowCarousel() {
+  const { shows } = useShows()
   return (
     <Carousel>
-      {movies.map((props: apiTypes) => (
+      {shows.map((props: apiTypes) => (
         <SwiperSlide key={props.id}>
-          <Movies
+          <Shows
             adult={props.adult}
             id={props.id}
             title={props.title}

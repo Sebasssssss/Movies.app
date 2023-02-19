@@ -1,6 +1,7 @@
-import PopularCarousel from './components/PopularMovies'
-import TrendingCarousel from './components/TrendingMovies'
-import UpcomingCarousel from './components/UpcomingMovies'
+import UpcomingCarousel from './components/Carousels/UpcomingMovies'
+import ShowCarousel from './components/Carousels/TvShowsCar'
+import PopularCarousel from './components/Carousels/PopularMovies'
+import TrendingCarousel from './components/Carousels/TrendingMovies'
 import { IoAdd, IoPlay, IoStar } from 'react-icons/io5'
 import { Rubik } from '@next/font/google'
 
@@ -40,6 +41,12 @@ export default function Home() {
           Upcoming
         </h1>
         <UpcomingCarousel />
+      </div>
+      <div className="w-full p-4">
+        <h1 className={`${rubik.className} text-xl font-semibold px-10`}>
+          On TV
+        </h1>
+        <ShowCarousel />
       </div>
       <div className="w-full p-4">
         <h1 className={`${rubik.className} text-xl font-semibold px-10`}>

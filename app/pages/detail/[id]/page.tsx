@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import Carousel from '@/components/Carousel'
-import Movies from '@/components/Movie'
+import Card from '@/components/Card'
 import { SwiperSlide } from 'swiper/react'
 import { IoStar, IoStarHalf } from 'react-icons/io5'
 import { Rubik } from '@next/font/google'
@@ -65,7 +65,7 @@ export default function Page({ params }) {
         <Carousel>
           {similar.map((props: apiTypes) => (
             <SwiperSlide key={props.id}>
-              <Movies
+              <Card
                 adult={props.adult}
                 id={props.id}
                 title={props.title}

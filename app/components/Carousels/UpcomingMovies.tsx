@@ -1,6 +1,6 @@
 'use client'
-import Movies from './Movie'
-import Carousel from './Carousel'
+import Card from '../Card'
+import Carousel from '../Carousel'
 import { SwiperSlide } from 'swiper/react'
 import { useMovies } from '@/hooks/useMovies'
 import { apiTypes } from 'interfaces/movie'
@@ -11,7 +11,7 @@ export default function UpcomingCarousel() {
     <Carousel>
       {movies.map((props: apiTypes) => (
         <SwiperSlide key={props.id}>
-          <Movies
+          <Card
             adult={props.adult}
             id={props.id}
             title={props.title}

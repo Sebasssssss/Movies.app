@@ -1,7 +1,7 @@
 import { API_URL, API_KEY } from './settings'
 
 export default async function searchMovies({ keyword }) {
-  const apiUrl = `${API_URL}/search/movie?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&query=${keyword}`
+  const apiUrl = `${API_URL}/search/multi?api_key=${API_KEY}&language=en-US&page=1&include_adult=true&query=${keyword}`
 
   return fetch(apiUrl)
     .then(res => res.json())
