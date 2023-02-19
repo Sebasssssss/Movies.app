@@ -36,19 +36,19 @@ export default function Home() {
         </div>
       </main>
       <div className="w-full p-4">
-        <h1 className={`${rubik.className} text-xl font-semibold py-5`}>
+        <h1 className={`${rubik.className} text-xl font-semibold px-10`}>
           Upcoming
         </h1>
         <UpcomingCarousel />
       </div>
       <div className="w-full p-4">
-        <h1 className={`${rubik.className} text-xl font-semibold py-5`}>
+        <h1 className={`${rubik.className} text-xl font-semibold px-10`}>
           Popular
         </h1>
         <PopularCarousel />
       </div>
       <div className="w-full p-4">
-        <h1 className={`${rubik.className} text-xl font-semibold py-5`}>
+        <h1 className={`${rubik.className} text-xl font-semibold px-10`}>
           Trending
         </h1>
         <TrendingCarousel />
