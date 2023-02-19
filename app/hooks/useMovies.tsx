@@ -2,14 +2,14 @@
 import { useState, useEffect } from 'react'
 import getMovies from 'services/getMovies'
 
-export function useMovies(): {} {
+export function useMovies({ category }) {
   const [movies, setMovies] = useState([])
 
   useEffect(
     function () {
-      getMovies().then(movie => setMovies(movie))
+      getMovies({ category }).then(movie => setMovies(movie))
     },
-    [setMovies]
+    [setMovies, category]
   )
 
   return { movies }

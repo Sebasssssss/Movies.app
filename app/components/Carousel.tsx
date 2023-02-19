@@ -1,18 +1,12 @@
-import Movies from './Movie'
-import { apiTypes } from 'interfaces/movie'
-import { useMovies } from '@/hooks/useMovies'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-export default function Carousel() {
-  const { movies } = useMovies()
-
+export default function Carousel({ children }) {
   return (
     <Swiper
-      slidesPerView={4}
       loop={true}
       pagination={{
         clickable: true
@@ -43,18 +37,7 @@ export default function Carousel() {
       }}
       className="inline-flex items-center w-full justify-center p-10"
     >
-      {movies.map((props: apiTypes) => (
-        <SwiperSlide key={props.id}>
-          <Movies
-            adult={props.adult}
-            id={props.id}
-            title={props.title}
-            poster_path={props.poster_path}
-            release_date={props.release_date}
-            popularity={props.popularity}
-          />
-        </SwiperSlide>
-      ))}
+      {children}
     </Swiper>
   )
 }

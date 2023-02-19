@@ -1,15 +1,12 @@
-'use client'
-import ListOfMovies from './components/ListOfMovies'
-import { useMovies } from './hooks/useMovies'
-import './globals.css'
+import PopularCarousel from './components/PopularMovies'
+import TrendingCarousel from './components/TrendingMovies'
+import UpcomingCarousel from './components/UpcomingMovies'
 import { IoAdd, IoPlay, IoStar } from 'react-icons/io5'
 import { Rubik } from '@next/font/google'
-import Carousel from './components/Carousel'
 
 const rubik = Rubik({ subsets: ['latin'] })
 
 export default function Home() {
-  const { movies } = useMovies()
   return (
     <>
       <main className="h-[100vh] grid items-center w-full bg-[url('../public/homepage.jpg')] bg-cover bg-center">
@@ -40,10 +37,21 @@ export default function Home() {
       </main>
       <div className="w-full p-4">
         <h1 className={`${rubik.className} text-xl font-semibold py-5`}>
-          Popular movies
+          Upcoming
         </h1>
-        <Carousel />
-        <ListOfMovies movies={movies} />
+        <UpcomingCarousel />
+      </div>
+      <div className="w-full p-4">
+        <h1 className={`${rubik.className} text-xl font-semibold py-5`}>
+          Popular
+        </h1>
+        <PopularCarousel />
+      </div>
+      <div className="w-full p-4">
+        <h1 className={`${rubik.className} text-xl font-semibold py-5`}>
+          Trending
+        </h1>
+        <TrendingCarousel />
       </div>
     </>
   )
