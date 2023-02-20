@@ -1,22 +1,21 @@
 import { Swiper } from 'swiper/react'
-import { Pagination, Navigation } from 'swiper'
+import { Navigation } from 'swiper'
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/css/navigation'
 
 export default function Carousel({ children }) {
   return (
     <Swiper
-      direction="horizontal"
       loop={true}
       pagination={{
         clickable: true
       }}
       navigation={true}
-      modules={[Pagination, Navigation]}
+      modules={[Navigation]}
       breakpoints={{
         '320': {
           slidesPerView: 2,
-          spaceBetween: 10
+          spaceBetween: 40
         },
         '640': {
           slidesPerView: 4,
@@ -35,7 +34,7 @@ export default function Carousel({ children }) {
           spaceBetween: 50
         }
       }}
-      className="inline-flex items-center w-full justify-center p-10"
+      className="inline-flex items-center w-full justify-center py-10"
     >
       {children}
     </Swiper>
