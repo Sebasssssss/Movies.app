@@ -7,7 +7,13 @@ const fetchSingleMovie = async (id: number) => {
 }
 
 export default async function getSingleMovie({ id }) {
-  const { runtime, title, poster_path, overview, release_date }: apiTypes =
-    await fetchSingleMovie(id)
-  return { runtime, title, poster_path, overview, release_date }
+  const {
+    runtime,
+    title,
+    poster_path,
+    overview,
+    release_date,
+    genres
+  }: apiTypes = await fetchSingleMovie(id)
+  return { runtime, title, poster_path, overview, release_date, genres }
 }

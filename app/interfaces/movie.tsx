@@ -7,4 +7,5 @@ export interface apiTypes {
   popularity?: string
   runtime?: number
   overview?: string
+  genres?: string | number
 }

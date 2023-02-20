@@ -2,8 +2,9 @@ import UpcomingCarousel from './components/Carousels/UpcomingMovies'
 import ShowCarousel from './components/Carousels/TvShowsCar'
 import PopularCarousel from './components/Carousels/PopularMovies'
 import TrendingCarousel from './components/Carousels/TrendingMovies'
-import { IoAdd, IoPlay, IoStar } from 'react-icons/io5'
+import { IoAdd, IoChevronDown, IoPlay, IoStar } from 'react-icons/io5'
 import { Inter } from '@next/font/google'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -39,27 +40,67 @@ export default function Home() {
         </div>
       </main>
       <div className="w-full px-4">
-        <h1 className={`${inter.className} text-xl font-semibold p-2`}>
-          Upcoming
-        </h1>
+        <div
+          className={`${inter.className} group p-2 inline-flex items-center gap-2 cursor-pointer`}
+        >
+          <h1 className="text-xl font-semibold">Upcoming </h1>
+          <Link href="/pages/upcomingMovies">
+            <div className="items-center inline-flex -translate-x-16 group-hover:translate-x-0 transition-all duration-300">
+              <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
+                See more
+              </span>
+              <IoChevronDown className="group-hover:translate-x-2 group-hover:-rotate-90 transition-all duration-300" />
+            </div>
+          </Link>
+        </div>
         <UpcomingCarousel />
       </div>
       <div className="w-full p-4">
-        <h1 className={`${inter.className} text-xl font-semibold p-2`}>
-          On TV
-        </h1>
+        <div
+          className={`${inter.className} group p-2 inline-flex items-center gap-2 cursor-pointer`}
+        >
+          <h1 className="text-xl font-semibold">On TV </h1>
+          <Link href="#">
+            <div className="items-center inline-flex -translate-x-16 group-hover:translate-x-0 transition-all duration-300">
+              <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
+                See more
+              </span>
+              <IoChevronDown className="group-hover:translate-x-2 group-hover:-rotate-90 transition-all duration-300" />
+            </div>
+          </Link>
+        </div>
         <ShowCarousel />
       </div>
       <div className="w-full p-4">
-        <h1 className={`${inter.className} text-xl font-semibold p-2`}>
-          Popular
-        </h1>
+        <div
+          className={`${inter.className} group p-2 inline-flex items-center gap-2 cursor-pointer`}
+        >
+          <h1 className="text-xl font-semibold">Popular Movies</h1>
+          <Link href="/pages/popularMovies">
+            <div className="items-center inline-flex -translate-x-16 group-hover:translate-x-0 transition-all duration-300">
+              <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
+                See more
+              </span>
+              <IoChevronDown className="group-hover:translate-x-2 group-hover:-rotate-90 transition-all duration-300" />
+            </div>
+          </Link>
+        </div>
         <PopularCarousel />
       </div>
       <div className="w-full p-4">
-        <h1 className={`${inter.className} text-xl font-semibold p-2`}>
-          Trending
-        </h1>
+        <div
+          className={`${inter.className} group p-2 inline-flex items-center gap-2 cursor-pointer`}
+        >
+          <h1 className="text-xl font-semibold">Top rated movies</h1>
+          <Link href="/pages/topratedMovies">
+            <div className="items-center inline-flex -translate-x-16 group-hover:translate-x-0 transition-all duration-300">
+              <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
+                See more
+              </span>
+              <IoChevronDown className="group-hover:translate-x-2 group-hover:-rotate-90 transition-all duration-300" />
+            </div>
+          </Link>
+        </div>
         <TrendingCarousel />
       </div>
     </>

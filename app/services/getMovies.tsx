@@ -15,7 +15,8 @@ export default async function getMovies({ category }) {
           title,
           poster_path,
           release_date,
-          popularity
+          popularity,
+          genres
         }: apiTypes = movie
         return {
           adult,
@@ -23,7 +24,8 @@ export default async function getMovies({ category }) {
           title,
           poster_path,
           release_date,
-          popularity
+          popularity,
+          genres
         }
       })
       return movies

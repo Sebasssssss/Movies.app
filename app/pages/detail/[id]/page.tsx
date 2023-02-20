@@ -3,14 +3,14 @@ import SimilarMovieCar from '@/components/Carousels/SimilarMovie'
 import Image from 'next/image'
 import { IoStar, IoStarHalf } from 'react-icons/io5'
 import { Rubik } from '@next/font/google'
-import { hoursConvert, useSingleMovie } from '@/hooks/useSingleMovie'
 import { BsDot } from 'react-icons/bs'
+import { hoursConvert, useSingleMovie } from '@/hooks/useSingleMovie'
+import ListOfGenres from '@/components/ListOfGenres'
 
 const rubik = Rubik({ subsets: ['latin'] })
 
 export default function Page({ params }) {
   const { singleMovie } = useSingleMovie({ id: params.id })
-
   return (
     <main className="w-full h-full overflow-hidden">
       <div className="w-full h-full fixed -z-10">
@@ -21,8 +21,8 @@ export default function Page({ params }) {
         />
         <div className="backdrop-blur-md w-full h-full bg-black/50"></div>
       </div>
-      <div className="h-[100vh] max-w-[1200px] mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-5 justify-center p-24 w-full">
+      <div className="h-full lg:h-[100vh] max-w-[1200px] mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-5 place-items-center justify-center p-24 w-full">
           <div className="w-[340px] h-auto md:w-[370px] overflow-hidden md:shadow-2xl shadow-black">
             <Image
               src={`https://image.tmdb.org/t/p/w500${singleMovie.poster_path}`}
@@ -39,12 +39,12 @@ export default function Page({ params }) {
             <h1 className={`${rubik.className} text-sm`}>
               {singleMovie.overview}
             </h1>
-            <div className="inline-flex items-center gap-1">
-              <h1 className="text-sm">{singleMovie.release_date}</h1>
-              <BsDot className="w-7 h-auto" />
-              <h1 className="text-sm">Action, Fantasy</h1>
-              <BsDot className="w-7 h-auto" />
-              <h1 className="text-sm">{hoursConvert(singleMovie.runtime)}</h1>
+            <div className="inline-flex items-center gap-1 w-full lg:w-max">
+              <h1 className="text-sm w-full">{singleMovie.release_date}</h1>
+              <ListOfGenres listofGenres={singleMovie} />
+              <h1 className="text-sm w-full">
+                {hoursConvert(singleMovie.runtime)}
+              </h1>
             </div>
             <div className="inline-flex items-center gap-1">
               <IoStar className="fill-yellow-500" />
@@ -59,7 +59,7 @@ export default function Page({ params }) {
           </div>
         </div>
       </div>
-      <div className="grid w-full mt-64 lg:mt-0">
+      <div className="block w-full">
         <h1 className={`${rubik.className} text-xl px-10 font-semibold`}>
           Similar movies
         </h1>
