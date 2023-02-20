@@ -17,12 +17,15 @@ export default function Movies({
         href={`/pages/detail/${id}`}
         className="w-[170px] h-[250px] group grid relative place-items-center overflow-hidden shadow-lg transition duration-500 ease-out hover:translate-y-[5%]"
       >
-        <div className="w-full h-full relative">
+        <div key={adult} className="w-full h-full">
           <Image
             src={`https://image.tmdb.org/t/p/w500${poster_path}`}
             alt={title}
-            width={170}
-            height={250}
+            fill
+            sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+            priority
           />
           <div className="z-10 text-white opacity-0 translate-y-[25%] group-hover:opacity-100 group-hover:translate-y-0 text-left flex flex-col w-full h-full px-6 py-2 backdrop-blur-md bg-black/20 transition duration-500">
             <h1 className="text-md w-full py-1.5 font-bold">{title}</h1>

@@ -8,12 +8,12 @@ export default function Navbar() {
       <nav className="justify-between p-4 w-full mx-auto flex">
         <Link
           href="/"
-          className="flex items-center text-md font-semibold border-2 border-[#58586a] text-[#58586a] hover:text-[#EB455F] hover:border-[#EB454F] px-2 rounded-full transition-colors duration-200"
+          className="flex items-center text-md font-semibold border-2 border-[#58586a] text-[#58586a] hover:text-[#EB455F] hover:border-[#EB454F] px-2 rounded-full active:scale-[0.95] transition-transform duration-200 ease-in-out"
         >
           <IoHome />
         </Link>
         <SearchForm />
-        <button className="px-5 hidden sm:block py-1 border-2 rounded-xl text-[#58586a] border-[#58586a] hover:text-[#EB455F] hover:border-[#EB455F] transition-colors duration-200">
+        <button className="px-5 hidden sm:block py-1 border-2 rounded-xl text-[#58586a] border-[#58586a] hover:text-[#EB455F] hover:border-[#EB455F] active:scale-[0.95] transition-transform duration-200 ease-in-out">
           Sign up
         </button>
       </nav>

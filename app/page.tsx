@@ -25,10 +25,10 @@ export default function Home() {
                 <IoStar className="fill-yellow-500" /> 7.5
               </h1>
               <div className="inline-flex items-center gap-4">
-                <button className="uppercase bg-[#EB455F] rounded-full px-7 py-2 inline-flex items-center gap-2">
+                <button className="uppercase bg-[#EB455F] rounded-full px-7 py-2 inline-flex items-center gap-2 active:scale-[0.95] transition-transform duration-200 ease-in-out">
                   <IoPlay /> watch
                 </button>
-                <button className="uppercase bg-black rounded-full px-7 py-2 inline-flex items-center gap-2">
+                <button className="uppercase bg-black rounded-full px-7 py-2 inline-flex items-center gap-2 active:scale-[0.95] transition-transform duration-200 ease-in-out">
                   <IoAdd /> watch
                 </button>
               </div>

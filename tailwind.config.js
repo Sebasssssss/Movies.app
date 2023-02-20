@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {}
+    extend: {
+      boxShadow: {
+        search: '0 0 0 4px #EB454F50'
+      }
+    }
   },
   plugins: []
 }
