@@ -44,9 +44,7 @@ export default function Page({ params }) {
               <BsDot className="w-7 h-auto" />
               <h1 className="text-sm">Action, Fantasy</h1>
               <BsDot className="w-7 h-auto" />
-              <h1 className="text-sm lg:text-lg">
-                {hoursConvert(singleMovie.runtime)}
-              </h1>
+              <h1 className="text-sm">{hoursConvert(singleMovie.runtime)}</h1>
             </div>
             <div className="inline-flex items-center gap-1">
               <IoStar className="fill-yellow-500" />
@@ -61,7 +59,7 @@ export default function Page({ params }) {
           </div>
         </div>
       </div>
-      <div className="grid w-full mt-64">
+      <div className="grid w-full mt-64 lg:mt-0">
         <h1 className={`${rubik.className} text-xl px-10 font-semibold`}>
           Similar movies
         </h1>

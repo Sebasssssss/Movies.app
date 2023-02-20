@@ -5,7 +5,7 @@ import { IoHome } from 'react-icons/io5'
 export default function Navbar() {
   return (
     <header className="fixed top-0 w-full bg-[#0e0e10]/50 backdrop-blur-md z-30">
-      <nav className="justify-between p-4 max-w-[1200px] mx-auto flex">
+      <nav className="justify-between p-4 w-full mx-auto flex">
         <Link
           href="/"
           className="flex items-center text-md font-semibold border-2 border-[#58586a] text-[#58586a] hover:text-[#EB455F] hover:border-[#EB454F] px-2 rounded-full transition-colors duration-200"
