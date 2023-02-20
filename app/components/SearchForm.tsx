@@ -25,7 +25,7 @@ export default function SearchForm() {
         placeholder="Search Movie"
         onChange={handleChange}
         value={keyword}
-        className="bg-transparent border-2 border-[#58586a] w-full rounded-full px-4 py-1 outline-none placeholder:text-[#58586a] focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 focus:ring-offset-gray-100 transition-all"
+        className="bg-transparent border-2 border-[#58586a] w-full rounded-full px-4 py-1 outline-none placeholder:text-[#58586a] focus:outline-none focus:ring-2 focus:ring-[#ff4a4f] focus:ring-offset-2 focus:ring-offset-[#FCFFE7] transition-all"
       />
       <button type="submit" className="absolute right-3">
         <FiSearch className="text-[#58586a]" />
