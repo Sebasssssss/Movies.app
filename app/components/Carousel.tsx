@@ -1,7 +1,6 @@
 import { Swiper } from 'swiper/react'
 import { Pagination, Navigation } from 'swiper'
 import 'swiper/css'
-import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 export default function Carousel({ children }) {

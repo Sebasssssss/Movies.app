@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --swiper-theme-color: #f8ede3;
+  --swiper-theme-color: #cd5888;
 }
 
 .swiper-pagination-bullets {
