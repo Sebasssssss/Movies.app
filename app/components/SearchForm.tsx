@@ -9,6 +9,7 @@ export default function SearchForm() {
 
   const handleSubmit = e => {
     e.preventDefault()
+    if (keyword == '') return null
     router.push(`/pages/search/${keyword}`)
   }
 
