@@ -14,7 +14,7 @@ export default function Home() {
       <main className="h-[100vh] grid items-center w-full bg-[url('../public/homepage.png')] bg-cover bg-center">
         <div className="w-full bg-black/50 bg-gradient-to-t from-[#060606] to-transparent">
           <div className="max-w-[1200px] mx-auto w-full h-[100vh] grid items-center">
-            <div className="text-justify grid gap-5 w-full lg:w-[700px] p-10">
+            <div className="text-justify grid gap-4 w-full lg:w-[700px] p-10">
               <h1 className={`${inter.className} text-7xl font-bold`}>
                 Peaky blinders
               </h1>
@@ -28,10 +28,10 @@ export default function Home() {
                 <IoStar className="fill-yellow-500" /> 7.5
               </h1>
               <div className="inline-flex items-center gap-4">
-                <button className="uppercase bg-[#EB455F] rounded-full px-7 py-2 inline-flex items-center gap-2 active:scale-[0.95] transition-transform duration-200 ease-in-out">
+                <button className="uppercase bg-[#EB455F] rounded-full px-8 py-2 inline-flex items-center gap-2 active:scale-[0.95] transition-transform duration-200 ease-in-out">
                   <IoPlay /> watch
                 </button>
-                <button className="uppercase bg-black rounded-full px-7 py-2 inline-flex items-center gap-2 active:scale-[0.95] transition-transform duration-200 ease-in-out">
+                <button className="uppercase bg-black rounded-full px-8 py-2 inline-flex items-center gap-2 active:scale-[0.95] transition-transform duration-200 ease-in-out">
                   <IoAdd /> watch
                 </button>
               </div>
@@ -39,68 +39,65 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <div className="w-full px-4">
-        <div
+      <div className="grid grid-rows-4 gap-12"></div>
+      <div className="w-full">
+        <Link
+          href="/pages/upcomingMovies"
           className={`${inter.className} group p-2 inline-flex items-center gap-2 cursor-pointer`}
         >
           <h1 className="text-xl font-semibold">Upcoming </h1>
-          <Link href="/pages/upcomingMovies">
-            <div className="items-center inline-flex -translate-x-16 group-hover:translate-x-0 transition-all duration-300">
-              <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
-                See more
-              </span>
-              <IoChevronDown className="group-hover:translate-x-2 group-hover:-rotate-90 transition-all duration-300" />
-            </div>
-          </Link>
-        </div>
+          <div className="items-center inline-flex -translate-x-16 group-hover:translate-x-0 group-hover:text-[#EB454F] transition-all duration-300">
+            <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
+              See more
+            </span>
+            <IoChevronDown className="group-hover:translate-x-2 group-hover:-rotate-90 transition-all duration-300" />
+          </div>
+        </Link>
         <UpcomingCarousel />
       </div>
-      <div className="w-full p-4">
-        <div
+      <div className="w-full">
+        <Link
+          href="#"
           className={`${inter.className} group p-2 inline-flex items-center gap-2 cursor-pointer`}
         >
           <h1 className="text-xl font-semibold">On TV </h1>
-          <Link href="#">
-            <div className="items-center inline-flex -translate-x-16 group-hover:translate-x-0 transition-all duration-300">
-              <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
-                See more
-              </span>
-              <IoChevronDown className="group-hover:translate-x-2 group-hover:-rotate-90 transition-all duration-300" />
-            </div>
-          </Link>
-        </div>
+          <div className="items-center inline-flex -translate-x-16 group-hover:translate-x-0 group-hover:text-[#EB454F] transition-all duration-300">
+            <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
+              See more
+            </span>
+            <IoChevronDown className="group-hover:translate-x-2 group-hover:-rotate-90 transition-all duration-300" />
+          </div>
+        </Link>
         <ShowCarousel />
       </div>
-      <div className="w-full p-4">
-        <div
+      <div className="w-full">
+        <Link
+          href="/pages/popularMovies"
           className={`${inter.className} group p-2 inline-flex items-center gap-2 cursor-pointer`}
         >
           <h1 className="text-xl font-semibold">Popular Movies</h1>
-          <Link href="/pages/popularMovies">
-            <div className="items-center inline-flex -translate-x-16 group-hover:translate-x-0 transition-all duration-300">
-              <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
-                See more
-              </span>
-              <IoChevronDown className="group-hover:translate-x-2 group-hover:-rotate-90 transition-all duration-300" />
-            </div>
-          </Link>
-        </div>
+          <div className="items-center inline-flex -translate-x-16 group-hover:translate-x-0 group-hover:text-[#EB454F] transition-all duration-300">
+            <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
+              See more
+            </span>
+            <IoChevronDown className="group-hover:translate-x-2 group-hover:-rotate-90 transition-all duration-300" />
+          </div>
+        </Link>
         <PopularCarousel />
       </div>
-      <div className="w-full p-4">
-        <div
+      <div className="w-full">
+        <Link
+          href="/pages/topratedMovies"
           className={`${inter.className} group p-2 inline-flex items-center gap-2 cursor-pointer`}
         >
           <h1 className="text-xl font-semibold">Top rated movies</h1>
-          <Link href="/pages/topratedMovies">
-            <div className="items-center inline-flex -translate-x-16 group-hover:translate-x-0 transition-all duration-300">
-              <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
-                See more
-              </span>
-              <IoChevronDown className="group-hover:translate-x-2 group-hover:-rotate-90 transition-all duration-300" />
-            </div>
-          </Link>
-        </div>
+          <div className="items-center inline-flex -translate-x-16 group-hover:text-[#EB454F] group-hover:translate-x-0 transition-all duration-300">
+            <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
+              See more
+            </span>
+            <IoChevronDown className="group-hover:translate-x-2 group-hover:-rotate-90 transition-all duration-300" />
+          </div>
+        </Link>
         <TrendingCarousel />
       </div>
     </>
