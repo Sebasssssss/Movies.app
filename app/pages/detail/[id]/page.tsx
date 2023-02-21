@@ -3,7 +3,6 @@ import SimilarMovieCar from '@/components/Carousels/SimilarMovie'
 import Image from 'next/image'
 import { IoStar, IoStarHalf } from 'react-icons/io5'
 import { Rubik } from '@next/font/google'
-import { BsDot } from 'react-icons/bs'
 import { hoursConvert, useSingleMovie } from '@/hooks/useSingleMovie'
 import ListOfGenres from '@/components/ListOfGenres'
 
@@ -39,12 +38,12 @@ export default function Page({ params }) {
             <h1 className={`${rubik.className} text-sm`}>
               {singleMovie.overview}
             </h1>
-            <div className="inline-flex items-center gap-1 w-full lg:w-max">
-              <h1 className="text-sm w-full">{singleMovie.release_date}</h1>
+            <div className="grid grid-rows-2 justify-center lg:justify-start w-full gap-2">
+              <div className="inline-flex items-center justify-center lg:justify-start gap-2 w-full">
+                <h1 className="text-sm">{singleMovie.release_date}</h1>
+                <h1 className="text-sm">{hoursConvert(singleMovie.runtime)}</h1>
+              </div>
               <ListOfGenres listofGenres={singleMovie} />
-              <h1 className="text-sm w-full">
-                {hoursConvert(singleMovie.runtime)}
-              </h1>
             </div>
             <div className="inline-flex items-center gap-1">
               <IoStar className="fill-yellow-500" />
@@ -53,7 +52,7 @@ export default function Page({ params }) {
               <IoStar className="fill-yellow-500" />
               <IoStarHalf className="fill-yellow-500" />
             </div>
-            <button className="w-max rounded bg-red-500 px-3 py-1">
+            <button className="w-max rounded bg-[#EB454F] active:scale-[0.95] px-3 py-1 transition-transform duration-200 ease-in-out">
               Watch
             </button>
           </div>

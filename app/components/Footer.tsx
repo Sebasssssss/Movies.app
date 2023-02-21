@@ -5,9 +5,8 @@ const rubik = Rubik({ subsets: ['latin'] })
 
 export default function Footer() {
   return (
-    <div className="w-full bg-[#0a0a0a] p-5 grid justify-center">
+    <div className="w-full bg-[#0a0a0a] p-8 grid justify-center">
       <div className="grid text-center w-full border-b border-[#303030] gap-2 pb-5 mb-5">
-        <h1 className={`${rubik.className} text-lg`}>Sebass</h1>
         <div
           className={`${rubik.className} uppercase inline-flex gap-4 justify-center text-sm`}
         >

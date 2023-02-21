@@ -1,5 +1,9 @@
-import Loader from '@/components/Loader'
+import Loader from 'components/Loader'
 
 export default function Loading() {
-  return <Loader />
+  return (
+    <div className="w-full h-[100vh] grid place-items-center">
+      <Loader />
+    </div>
+  )
 }
