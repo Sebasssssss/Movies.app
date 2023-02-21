@@ -1,8 +1,10 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import { IoStar, IoStarHalf } from 'react-icons/io5'
 import { apiTypes } from 'interfaces/movie'
 import { Inter } from '@next/font/google'
+import { useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,6 +16,8 @@ export default function Movies({
   release_date,
   popularity
 }: apiTypes) {
+  const [isLoading, setIsLoading] = useState(true)
+
   return (
     <>
       <Link
@@ -28,7 +32,10 @@ export default function Movies({
             sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
-            priority
+            className={`${
+              isLoading ? 'grayscale blur-md' : 'grayscale-0 blur-0'
+            } duration-700 ease-in-out`}
+            onLoadingComplete={() => setIsLoading(false)}
           />
           <div className="z-10 text-white opacity-0 translate-y-[25%] group-hover:opacity-100 group-hover:translate-y-0 text-left flex flex-col w-full h-full px-6 py-2 backdrop-blur-md bg-black/20 transition duration-500">
             <h1
