@@ -1,4 +1,5 @@
 'use client'
+import Loader from '../Loader'
 import Carousel from '../Carousel'
 import Card from '../Card'
 import { SwiperSlide } from 'swiper/react'
@@ -6,8 +7,12 @@ import { useMovies } from '@/hooks/useMovies'
 import { apiTypes } from 'interfaces/movie'
 
 export default function PopularCarousel() {
-  const { movies } = useMovies({ category: 'popular' })
-  return (
+  const { movies, loading } = useMovies({ category: 'popular' })
+  return loading ? (
+    <div className="w-full grid place-items-center">
+      <Loader />
+    </div>
+  ) : (
     <Carousel>
       {movies.map((props: apiTypes) => (
         <SwiperSlide key={props.id}>

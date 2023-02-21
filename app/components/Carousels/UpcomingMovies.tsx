@@ -1,13 +1,18 @@
 'use client'
 import Card from '../Card'
 import Carousel from '../Carousel'
+import Loader from '../Loader'
 import { SwiperSlide } from 'swiper/react'
 import { useMovies } from '@/hooks/useMovies'
 import { apiTypes } from 'interfaces/movie'
 
 export default function UpcomingCarousel() {
-  const { movies } = useMovies({ category: 'upcoming' })
-  return (
+  const { movies, loading } = useMovies({ category: 'upcoming' })
+  return loading ? (
+    <div className="w-full grid place-items-center">
+      <Loader />
+    </div>
+  ) : (
     <Carousel>
       {movies.map((props: apiTypes) => (
         <SwiperSlide key={props.id}>

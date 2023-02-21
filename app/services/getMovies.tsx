@@ -1,8 +1,8 @@
 import { apiTypes } from '@/interfaces/movie'
 import { API_URL, API_KEY } from './settings'
 
-export default async function getMovies({ category }) {
-  const apiUrl = `${API_URL}/movie/${category}?api_key=${API_KEY}`
+export default async function getMovies({ category, page = '1' }) {
+  const apiUrl = `${API_URL}/movie/${category}?api_key=${API_KEY}&page=${page}`
 
   return fetch(apiUrl)
     .then(res => res.json())

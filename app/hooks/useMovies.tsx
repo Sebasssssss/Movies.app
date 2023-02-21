@@ -2,15 +2,20 @@
 import { useState, useEffect } from 'react'
 import getMovies from 'services/getMovies'
 
-export function useMovies({ category }) {
+export function useMovies({ category, page }) {
   const [movies, setMovies] = useState([])
+  const [loading, setLoading] = useState(false)
 
   useEffect(
     function () {
-      getMovies({ category }).then(movie => setMovies(movie))
+      setLoading(true)
+      getMovies({ category, page }).then(movie => {
+        setLoading(false)
+        setMovies(movie)
+      })
     },
-    [setMovies, category]
+    [setMovies, category, page]
   )
 
-  return { movies }
+  return { movies, loading }
 }
