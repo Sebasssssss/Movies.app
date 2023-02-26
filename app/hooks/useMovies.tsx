@@ -2,7 +2,12 @@
 import { useState, useEffect } from 'react'
 import getMovies from 'services/getMovies'
 
-export function useMovies({ category, page }) {
+interface Props {
+  category: string
+  page: number
+}
+
+export function useMovies({ category, page = 1 }: Props) {
   const [movies, setMovies] = useState([])
   const [loading, setLoading] = useState(false)
 

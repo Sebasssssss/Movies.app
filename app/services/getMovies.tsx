@@ -15,8 +15,8 @@ export default async function getMovies({ category, page = '1' }) {
           title,
           poster_path,
           release_date,
-          popularity,
-          genres
+          vote_average,
+          genre_ids
         }: apiTypes = movie
         return {
           adult,
@@ -24,8 +24,8 @@ export default async function getMovies({ category, page = '1' }) {
           title,
           poster_path,
           release_date,
-          popularity,
-          genres
+          vote_average,
+          genre_ids
         }
       })
       return movies

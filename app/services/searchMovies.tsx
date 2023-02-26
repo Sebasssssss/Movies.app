@@ -8,7 +8,7 @@ export default async function searchMovies({ keyword }) {
     .then(response => {
       const { results = [] } = response
       const movies = results.map(movie => {
-        const { id, runtime, title, poster_path, release_date, popularity } =
+        const { id, runtime, title, poster_path, release_date, vote_average } =
           movie
         return {
           id,
@@ -16,7 +16,7 @@ export default async function searchMovies({ keyword }) {
           runtime,
           poster_path,
           release_date,
-          popularity
+          vote_average
         }
       })
       return movies

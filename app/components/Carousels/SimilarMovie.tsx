@@ -17,7 +17,7 @@ export default function SimilarMovieCar({ id }) {
             title={props.title}
             poster_path={props.poster_path}
             release_date={props.release_date}
-            popularity={props.popularity}
+            vote_average={props.vote_average}
           />
         </SwiperSlide>
       ))}

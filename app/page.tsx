@@ -2,103 +2,97 @@ import UpcomingCarousel from './components/Carousels/UpcomingMovies'
 import ShowCarousel from './components/Carousels/TvShowsCar'
 import PopularCarousel from './components/Carousels/PopularMovies'
 import TrendingCarousel from './components/Carousels/TrendingMovies'
-import { IoAdd, IoChevronDown, IoPlay, IoStar } from 'react-icons/io5'
-import { Inter } from '@next/font/google'
 import Link from 'next/link'
-
-const inter = Inter({ subsets: ['latin'] })
+import { IoArrowDown, IoChevronForward } from 'react-icons/io5'
 
 export default function Home() {
   return (
     <>
-      <main className="h-[100vh] grid items-center w-full bg-[url('../public/homepage.png')] bg-cover bg-center">
-        <div className="w-full bg-black/50 bg-gradient-to-t from-[#060606] to-transparent">
-          <div className="max-w-[1200px] mx-auto w-full h-[100vh] grid items-center">
-            <div className="text-justify grid gap-4 w-full lg:w-[700px] p-10">
-              <h1 className={`${inter.className} text-7xl font-bold`}>
-                Peaky blinders
-              </h1>
-              <p className={`${inter.className} text-md`}>
-                A gangster family epic set in 1900s England, centering on a gang
-                who sew razor blades in the peaks of their caps, and their
-                fierce boss Tommy Shelby. Thomas Shelby and his brothers return
-                to Birmingham after serving in the British Army during WWI.
-              </p>
-              <h1 className="flex items-center gap-1">
-                <IoStar className="fill-yellow-500" /> 7.5
-              </h1>
+      <main className="h-[100vh] grid items-center w-full bg-[url('../public/homepage1.png')] bg-cover bg-center">
+        <div className="w-full bg-black/50 bg-gradient-to-tr from-black to-transparent">
+          <div className="w-full px-[128px] h-[100vh] grid items-center">
+            <div className="text-justify grid gap-[64px] w-full lg:w-[719px]">
+              <div className="grid gap-[32px]">
+                <h1 className="text-[96px] font-outfit">Cinema web app</h1>
+                <p className="text-[18px]">
+                  This web app is made with the TMDB API. Feel free to look for
+                  wherever movie you’re interested in. You’ll be able to search
+                  for tv shows too! Stay tuned for the new features that we will
+                  be adding soon!
+                </p>
+              </div>
               <div className="inline-flex items-center gap-4">
-                <button className="uppercase bg-[#EB455F] rounded-full px-8 py-2 inline-flex items-center gap-2 active:scale-[0.95] transition-transform duration-200 ease-in-out">
-                  <IoPlay /> watch
-                </button>
-                <button className="uppercase bg-black rounded-full px-8 py-2 inline-flex items-center gap-2 active:scale-[0.95] transition-transform duration-200 ease-in-out">
-                  <IoAdd /> watch
-                </button>
+                <a
+                  href="#upcoming"
+                  className="py-[15px] px-[30px] font-outfit bg-primary inline-flex items-center gap-1 rounded-[8px] text-[20px] hover:bg-primary/70 active:scale-[0.95] transition-all duration-300"
+                >
+                  Let&apos;s take a look{' '}
+                  <IoArrowDown className="w-[24px] h-auto" />
+                </a>
               </div>
             </div>
           </div>
         </div>
       </main>
-      <div className="grid grid-rows-4 gap-12"></div>
-      <div className="w-full">
-        <Link
-          href="/pages/upcomingMovies"
-          className={`${inter.className} group p-2 inline-flex items-center gap-2 cursor-pointer`}
-        >
-          <h1 className="text-xl font-semibold">Upcoming </h1>
-          <div className="items-center inline-flex -translate-x-16 group-hover:translate-x-0 group-hover:text-[#EB454F] transition-all duration-300">
-            <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
-              See more
-            </span>
-            <IoChevronDown className="group-hover:translate-x-2 group-hover:-rotate-90 transition-all duration-300" />
+      <div id="upcoming" className="w-full p-[16px] lg:p-[128px]">
+        <div className="bg-[#161616] p-[32px] rounded-[8px]">
+          <div className="py-8 w-full flex justify-between items-center">
+            <h1 className="text-[20px] font-outfit md:text-[32px]">Upcoming</h1>
+            <Link
+              href="/pages/upcomingMovies"
+              className="py-[8px] px-[16px] font-outfit md:py-[15px] md:px-[30px] bg-primary inline-flex items-center gap-1 rounded-[8px] text-[20px] hover:bg-primary/70 active:scale-[0.95] transition-all duration-300"
+            >
+              See more <IoChevronForward />
+            </Link>
           </div>
-        </Link>
-        <UpcomingCarousel />
+          <UpcomingCarousel />
+        </div>
       </div>
-      <div className="w-full">
-        <Link
-          href="#"
-          className={`${inter.className} group p-2 inline-flex items-center gap-2 cursor-pointer`}
-        >
-          <h1 className="text-xl font-semibold">On TV </h1>
-          <div className="items-center inline-flex -translate-x-16 group-hover:translate-x-0 group-hover:text-[#EB454F] transition-all duration-300">
-            <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
-              See more
-            </span>
-            <IoChevronDown className="group-hover:translate-x-2 group-hover:-rotate-90 transition-all duration-300" />
+      <div id="upcoming" className="w-full p-[16px] lg:p-[128px]">
+        <div className="bg-[#161616] p-[32px] rounded-[8px]">
+          <div className="py-8 w-full flex justify-between items-center gap-2">
+            <h1 className="text-[20px] md:text-[32px] font-outfit">Tv shows</h1>
+            <Link
+              href="/pages/tvshows"
+              className="py-[8px] px-[16px] md:py-[15px] md:px-[30px] font-outfit bg-primary inline-flex items-center gap-1 rounded-[8px] text-[20px] hover:bg-primary/70 active:scale-[0.95] transition-all duration-300"
+            >
+              See more <IoChevronForward />
+            </Link>
           </div>
-        </Link>
-        <ShowCarousel />
+          <ShowCarousel />
+        </div>
       </div>
-      <div className="w-full">
-        <Link
-          href="/pages/popularMovies"
-          className={`${inter.className} group p-2 inline-flex items-center gap-2 cursor-pointer`}
-        >
-          <h1 className="text-xl font-semibold">Popular Movies</h1>
-          <div className="items-center inline-flex -translate-x-16 group-hover:translate-x-0 group-hover:text-[#EB454F] transition-all duration-300">
-            <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
-              See more
-            </span>
-            <IoChevronDown className="group-hover:translate-x-2 group-hover:-rotate-90 transition-all duration-300" />
+      <div id="upcoming" className="w-full p-[16px] lg:p-[128px]">
+        <div className="bg-[#161616] p-[32px] rounded-[8px]">
+          <div className="py-8 w-full flex justify-between items-center gap-2">
+            <h1 className="text-[20px] md:text-[32px] font-outfit">
+              Popular movies
+            </h1>
+            <Link
+              href="/pages/popularMovies"
+              className="py-[8px] px-[16px] md:py-[15px] md:px-[30px] font-outfit bg-primary inline-flex items-center gap-1 rounded-[8px] text-[20px] hover:bg-primary/70 active:scale-[0.95] transition-all duration-300"
+            >
+              See more <IoChevronForward />
+            </Link>
           </div>
-        </Link>
-        <PopularCarousel />
+          <PopularCarousel />
+        </div>
       </div>
-      <div className="w-full">
-        <Link
-          href="/pages/topratedMovies"
-          className={`${inter.className} group p-2 inline-flex items-center gap-2 cursor-pointer`}
-        >
-          <h1 className="text-xl font-semibold">Top rated movies</h1>
-          <div className="items-center inline-flex -translate-x-16 group-hover:text-[#EB454F] group-hover:translate-x-0 transition-all duration-300">
-            <span className="opacity-0 group-hover:opacity-100 transition-all duration-300">
-              See more
-            </span>
-            <IoChevronDown className="group-hover:translate-x-2 group-hover:-rotate-90 transition-all duration-300" />
+      <div id="upcoming" className="w-full p-[16px] lg:p-[128px]">
+        <div className="bg-[#161616] p-[32px] rounded-[8px]">
+          <div className="py-8 w-full flex justify-between items-center gap-2">
+            <h1 className="text-[20px] md:text-[32px] font-outfit">
+              Top rated movies
+            </h1>
+            <Link
+              href="/pages/topratedMovies"
+              className="py-[8px] px-[16px] md:py-[15px] md:px-[30px] font-outfit bg-primary inline-flex items-center gap-1 rounded-[8px] text-[20px] hover:bg-primary/70 active:scale-[0.95] transition-all duration-300"
+            >
+              See more <IoChevronForward />
+            </Link>
           </div>
-        </Link>
-        <TrendingCarousel />
+          <TrendingCarousel />
+        </div>
       </div>
     </>
   )

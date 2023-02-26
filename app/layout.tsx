@@ -8,12 +8,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      {/*
+    <html lang="en" className="scroll-smooth">
+      <head>
+        {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-      <head />
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=outfit@400&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="bg-[#060606] text-white">
         <Navbar />
         <div>{children}</div>

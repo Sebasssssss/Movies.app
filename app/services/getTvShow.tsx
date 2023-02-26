@@ -15,9 +15,9 @@ export default async function getTvShow() {
           title,
           poster_path,
           release_date,
-          popularity
+          vote_average
         }: apiTypes = show
-        return { adult, id, title, poster_path, release_date, popularity }
+        return { adult, id, title, poster_path, release_date, vote_average }
       })
       return shows
     })

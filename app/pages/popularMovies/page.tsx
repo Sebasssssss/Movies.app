@@ -5,7 +5,8 @@ import { useMovies } from '@/hooks/useMovies'
 export default function Page() {
   const { movies } = useMovies({ category: 'popular', page: '2' })
   return (
-    <main className="h-full max-w-[1200px] mx-auto p-4 mt-20">
+    <main className="w-full px-[96px] text-center grid justify-center items-center">
+      <h1 className="text-[64px] py-[96px] font-outfit">Popular Movies</h1>
       <ListOfCards movies={movies} />
     </main>
   )

@@ -13,28 +13,27 @@ export default function Carousel({ children }) {
       navigation={true}
       modules={[Navigation]}
       breakpoints={{
-        '320': {
-          slidesPerView: 2,
+        '640': {
+          slidesPerView: 1,
           spaceBetween: 40
         },
-        '640': {
-          slidesPerView: 4,
+        '768': {
+          slidesPerView: 2,
           spaceBetween: 20
         },
         '1000': {
-          slidesPerView: 5,
+          slidesPerView: 3,
           spaceBetween: 40
         },
         '1250': {
-          slidesPerView: 7,
+          slidesPerView: 3,
           spaceBetween: 50
         },
         '1420': {
-          slidesPerView: 9,
+          slidesPerView: 8,
           spaceBetween: 50
         }
       }}
-      className="inline-flex items-center w-full justify-center py-10"
     >
       {children}
     </Swiper>
