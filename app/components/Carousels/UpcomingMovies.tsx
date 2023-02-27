@@ -3,11 +3,11 @@ import Card from '../Card'
 import Carousel from '../Carousel'
 import Loader from '../Loader'
 import { SwiperSlide } from 'swiper/react'
-import { useMovies } from '@/hooks/useMovies'
+import { useDiscover } from '@/hooks/useDiscover'
 import { apiTypes } from 'interfaces/movie'
 
 export default function UpcomingCarousel() {
-  const { movies, loading } = useMovies({ category: 'upcoming' })
+  const { movies, loading } = useDiscover()
   return loading ? (
     <div className="w-full grid place-items-center">
       <Loader />

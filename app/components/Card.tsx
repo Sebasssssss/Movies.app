@@ -24,7 +24,7 @@ export default function Card({
         <div key={adult} className="w-full h-full rounded-[8px]">
           <Image
             src={`https://image.tmdb.org/t/p/w500${poster_path}`}
-            alt={title}
+            alt=""
             fill
             sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,

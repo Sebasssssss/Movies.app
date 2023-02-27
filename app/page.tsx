@@ -9,19 +9,19 @@ export default function Home() {
   return (
     <>
       <main className="h-[100vh] grid items-center w-full bg-[url('../public/homepage1.png')] bg-cover bg-center">
-        <div className="w-full bg-black/50 bg-gradient-to-tr from-black to-transparent">
-          <div className="w-full px-[128px] h-[100vh] grid items-center">
-            <div className="text-justify grid gap-[64px] w-full lg:w-[719px]">
-              <div className="grid gap-[32px]">
-                <h1 className="text-[96px] font-outfit">Cinema web app</h1>
-                <p className="text-[18px]">
+        <div className="w-full bg-[#060606]/50 bg-gradient-to-tr from-black to-transparent">
+          <div className="w-full py-[128px]  h-[100vh] grid items-center justify-center">
+            <div className="text-justify grid gap-[32px] w-full lg:w-[719px]">
+              <div className="grid gap-[16px] text-center">
+                <h1 className="text-[64px] font-outfit">Cinema web app</h1>
+                <p className="text-[16px] opacity-70">
                   This web app is made with the TMDB API. Feel free to look for
                   wherever movie you’re interested in. You’ll be able to search
                   for tv shows too! Stay tuned for the new features that we will
                   be adding soon!
                 </p>
               </div>
-              <div className="inline-flex items-center gap-4">
+              <div className="inline-flex justify-center items-center gap-4">
                 <a
                   href="#upcoming"
                   className="py-[15px] px-[30px] font-outfit bg-primary inline-flex items-center gap-1 rounded-[8px] text-[20px] hover:bg-primary/70 active:scale-[0.95] transition-all duration-300"
@@ -34,7 +34,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <div id="upcoming" className="w-full p-[16px] lg:p-[128px]">
+      <div id="upcoming" className="w-full p-[16px] lg:p-[64px]">
         <div className="bg-[#161616] p-[32px] rounded-[8px]">
           <div className="py-8 w-full flex justify-between items-center">
             <h1 className="text-[20px] font-outfit md:text-[32px]">Upcoming</h1>
@@ -48,7 +48,7 @@ export default function Home() {
           <UpcomingCarousel />
         </div>
       </div>
-      <div id="upcoming" className="w-full p-[16px] lg:p-[128px]">
+      <div id="upcoming" className="w-full p-[16px] lg:p-[64px]">
         <div className="bg-[#161616] p-[32px] rounded-[8px]">
           <div className="py-8 w-full flex justify-between items-center gap-2">
             <h1 className="text-[20px] md:text-[32px] font-outfit">Tv shows</h1>
@@ -62,7 +62,7 @@ export default function Home() {
           <ShowCarousel />
         </div>
       </div>
-      <div id="upcoming" className="w-full p-[16px] lg:p-[128px]">
+      <div id="upcoming" className="w-full p-[16px] lg:p-[64px]">
         <div className="bg-[#161616] p-[32px] rounded-[8px]">
           <div className="py-8 w-full flex justify-between items-center gap-2">
             <h1 className="text-[20px] md:text-[32px] font-outfit">
@@ -78,7 +78,7 @@ export default function Home() {
           <PopularCarousel />
         </div>
       </div>
-      <div id="upcoming" className="w-full p-[16px] lg:p-[128px]">
+      <div id="upcoming" className="w-full p-[16px] lg:p-[64px]">
         <div className="bg-[#161616] p-[32px] rounded-[8px]">
           <div className="py-8 w-full flex justify-between items-center gap-2">
             <h1 className="text-[20px] md:text-[32px] font-outfit">

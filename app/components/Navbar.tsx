@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import GithubIco from './icons/github'
+import { IoLogoGithub } from 'react-icons/io5'
 import SearchForm from './SearchForm'
 
 export default function Navbar() {
@@ -8,7 +8,7 @@ export default function Navbar() {
       <nav className="justify-between w-full mx-auto flex">
         <Link
           href="/"
-          className="text-[24px] font-outfit text-white hover:border-[#EB454F] active:scale-[0.95] transition-transform duration-200"
+          className="text-[24px] font-outfit outline-none text-white hover:border-[#EB454F] active:scale-[0.95] transition-transform duration-200"
         >
           Cinema
         </Link>
@@ -17,7 +17,7 @@ export default function Navbar() {
           href="https://github.com/Sebasssssss"
           className="md:inline-flex items-center gap-2 hidden"
         >
-          <GithubIco /> Source
+          <IoLogoGithub /> Source
         </Link>
       </nav>
     </header>

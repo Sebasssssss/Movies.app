@@ -7,14 +7,10 @@ export default function Page() {
 
   return (
     <main className="w-full px-[96px] text-center grid justify-center items-center gap-[32px]">
-      <h1 className="text-[64px] pt-[96px]">Popular movies</h1>
+      <h1 className="text-[64px] pt-[96px]">Upcoming movies</h1>
       <div className="w-full text-left">
         <h1 className="text-[32px] py-[32px] font-outfit">Drama</h1>
-        <ListOfCards movies={movies.slice(0, 16)} />
-      </div>
-      <div className="w-full text-left">
-        <h1 className="text-[32px] py-[32px] font-outfit">Animation</h1>
-        <ListOfCards movies={movies.slice(0, 16)} />
+        <ListOfCards movies={movies} />
       </div>
     </main>
   )

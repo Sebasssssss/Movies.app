@@ -34,6 +34,7 @@ export default function Carousel({ children }) {
           spaceBetween: 50
         }
       }}
+      className="py-8"
     >
       {children}
     </Swiper>
