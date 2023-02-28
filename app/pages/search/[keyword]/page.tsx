@@ -8,7 +8,7 @@ export default function Page({ params }) {
 
   return (
     <>
-      <main className="h-full max-w-[1200px] mx-auto p-4 mt-20">
+      <main className="w-full px-[96px] text-center grid justify-center items-center gap-[32px] mt-[128px]">
         <ListOfCards movies={movies} />
       </main>
     </>

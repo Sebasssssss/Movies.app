@@ -36,7 +36,7 @@ export default function Card({
           />
           <div className="z-10 text-white flex flex-col justify-between opacity-0 translate-y-[25%] group-hover:opacity-100 group-hover:translate-y-0 text-left w-full h-full px-6 py-2 bg-black/60 transition duration-500">
             <div className="flex flex-col gap-2">
-              <h1 className="text-md w-full py-1">{title}</h1>
+              <h1 className="text-md w-full py-1 font-outfit">{title}</h1>
               <h1 className="text-sm w-full py-1">{release_date}</h1>
               <h1 className="text-sm w-max py-1 px-2 inline-flex items-center gap-1 border border-[#2B3467]">
                 {vote_average}
