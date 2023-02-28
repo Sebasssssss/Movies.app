@@ -28,7 +28,9 @@ export default function Page({ params }) {
             />
           </div>
           <div className="grid lg:flex lg:flex-col gap-4 lg:justify-center text-center lg:text-left place-items-center lg:place-items-start">
-            <h1 className="text-4xl font-outfit">{singleMovie.title}</h1>
+            <h1 style={{ fontFamily: 'Mirage' }} className="text-4xl">
+              {singleMovie.title}
+            </h1>
             <h1 className="">{singleMovie.overview}</h1>
             <div className="grid grid-rows-2 justify-center lg:justify-start w-full gap-2">
               <div className="inline-flex items-center justify-center lg:justify-start gap-2 w-full">
@@ -44,7 +46,12 @@ export default function Page({ params }) {
         </div>
       </div>
       <div className="block w-full">
-        <h1 className="text-xl px-10 font-semibold">Similar movies</h1>
+        <h1
+          style={{ fontFamily: 'Mirage' }}
+          className="text-xl px-10 font-semibold"
+        >
+          Similar movies
+        </h1>
         <SimilarMovieCar id={params.id} />
       </div>
     </main>

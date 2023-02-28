@@ -35,10 +35,10 @@ export default function Card({
             onLoadingComplete={() => setIsLoading(false)}
           />
           <div className="z-10 text-white flex flex-col justify-between opacity-0 translate-y-[25%] group-hover:opacity-100 group-hover:translate-y-0 text-left w-full h-full px-6 py-2 bg-black/60 transition duration-500">
-            <div className="flex flex-col gap-1">
-              <h1 className="text-md w-full py-1 font-outfit">{title}</h1>
+            <div className="flex flex-col gap-2">
+              <h1 className="text-md w-full py-1">{title}</h1>
               <h1 className="text-sm w-full py-1">{release_date}</h1>
-              <h1 className="text-sm w-max py-1 px-2 rounded-[8px] inline-flex items-center gap-1 border border-[#2B3467]">
+              <h1 className="text-sm w-max py-1 px-2 inline-flex items-center gap-1 border border-[#2B3467]">
                 {vote_average}
                 <IoStar className="text-yellow-400 fill-yellow-400" />
               </h1>
@@ -51,12 +51,6 @@ export default function Card({
                 </h1>
               </div>
             </div>
-            <Link
-              href={`/pages/detail/${id}`}
-              className="py-2 w-full bg-primary inline-flex active:scale-[0.95] transition-transform duration-300 items-center gap-1 justify-center rounded-[8px] mb-4"
-            >
-              <IoPlay /> Watch
-            </Link>
           </div>
         </div>
       </Link>
