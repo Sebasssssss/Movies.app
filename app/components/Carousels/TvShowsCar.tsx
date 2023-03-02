@@ -2,7 +2,7 @@
 import Card from '../Card'
 import Carousel from '../Carousel'
 import { SwiperSlide } from 'swiper/react'
-import { apiTypes } from 'interfaces/movie'
+import { apiTypes } from 'interfaces/movie.d'
 import useShows from '@/hooks/useShows'
 
 export default function ShowCarousel() {

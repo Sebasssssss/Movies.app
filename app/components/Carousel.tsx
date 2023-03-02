@@ -13,20 +13,24 @@ export default function Carousel({ children }) {
       navigation={true}
       modules={[Navigation]}
       breakpoints={{
-        '640': {
+        '320': {
           slidesPerView: 1,
           spaceBetween: 40
         },
-        '768': {
+        '640': {
           slidesPerView: 2,
+          spaceBetween: 40
+        },
+        '768': {
+          slidesPerView: 3,
           spaceBetween: 20
         },
         '1000': {
-          slidesPerView: 3,
+          slidesPerView: 4,
           spaceBetween: 40
         },
         '1250': {
-          slidesPerView: 3,
+          slidesPerView: 5,
           spaceBetween: 50
         },
         '1420': {

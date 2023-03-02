@@ -1,5 +1,5 @@
 import { API_URL, API_KEY } from './settings'
-import { apiTypes } from 'interfaces/movie'
+import { apiTypes } from 'interfaces/movie.d'
 
 export default async function getSimilarMovie({ id }) {
   const apiUrl = `${API_URL}/movie/${id}/similar?api_key=${API_KEY}&language=en-US&page=1`

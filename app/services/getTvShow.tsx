@@ -1,5 +1,5 @@
 import { API_URL, API_KEY } from 'services/settings'
-import { apiTypes } from 'interfaces/movie'
+import { apiTypes } from 'interfaces/movie.d'
 
 export default async function getTvShow() {
   const apiUrl = `${API_URL}/tv/popular?api_key=${API_KEY}&language=en-US`

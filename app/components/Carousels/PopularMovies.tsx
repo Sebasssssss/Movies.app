@@ -4,7 +4,7 @@ import Carousel from '../Carousel'
 import Card from '../Card'
 import { SwiperSlide } from 'swiper/react'
 import { useMovies } from '@/hooks/useMovies'
-import { apiTypes } from 'interfaces/movie'
+import { apiTypes } from 'interfaces/movie.d'
 
 export default function PopularCarousel() {
   const { movies, loading } = useMovies({ category: 'popular' })

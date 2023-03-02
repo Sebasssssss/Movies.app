@@ -1,13 +1,13 @@
-import { apiTypes } from '@/interfaces/movie'
+import { apiTypes } from '@/interfaces/movie.d'
 import { API_URL, API_KEY } from './settings'
 
-export default async function getMovies({ category, page = '1' }) {
+export default async function getMovies({ category, page = 1 }) {
   const apiUrl = `${API_URL}/movie/${category}?api_key=${API_KEY}&page=${page}`
 
   return fetch(apiUrl)
     .then(res => res.json())
     .then(response => {
-      const { results = [], total_pages } = response
+      const { results = [] } = response
       const movies = results.map(movie => {
         const {
           adult,

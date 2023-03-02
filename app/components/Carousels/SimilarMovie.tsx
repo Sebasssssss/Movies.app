@@ -2,7 +2,7 @@
 import Carousel from '../Carousel'
 import Card from '../Card'
 import { SwiperSlide } from 'swiper/react'
-import { apiTypes } from 'interfaces/movie'
+import { apiTypes } from 'interfaces/movie.d'
 import { useSimilarMovie } from '@/hooks/useSimilarMovie'
 
 export default function SimilarMovieCar({ id }) {

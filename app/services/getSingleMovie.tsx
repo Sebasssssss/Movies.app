@@ -1,5 +1,5 @@
 import { API_URL, API_KEY } from 'services/settings'
-import { apiTypes } from 'interfaces/movie'
+import { apiTypes } from 'interfaces/movie.d'
 
 const fetchSingleMovie = async (id: number) => {
   const apiUrl = `${API_URL}/movie/${id}?api_key=${API_KEY}&language=en-US`

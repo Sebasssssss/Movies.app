@@ -3,13 +3,16 @@ import ShowCarousel from './components/Carousels/TvShowsCar'
 import PopularCarousel from './components/Carousels/PopularMovies'
 import TrendingCarousel from './components/Carousels/TrendingMovies'
 import Link from 'next/link'
+import ListOfCards from './components/ListOfCards'
+import DropDownMenu from './components/DropDownMenu'
 import { IoArrowDown, IoChevronForward } from 'react-icons/io5'
+import SortedCarousel from './components/Carousels/SortedMovies'
 
 export default function Home() {
   return (
     <>
       <main className="h-[100vh] grid items-center w-full bg-[url('../public/homepage1.png')] bg-cover bg-center">
-        <div className="w-full bg-[#060606]/50 bg-gradient-to-tr from-black to-transparent">
+        <div className="w-full bg-[#060606]/50 bg-gradient-to-t from-[#060606] to-transparent">
           <div className="w-full py-[128px]  h-[100vh] grid items-center justify-center">
             <div className="text-justify grid gap-[32px] w-full lg:w-[719px]">
               <div className="grid gap-[16px] text-center font-outfit">
@@ -34,9 +37,10 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <SortedCarousel />
       <div id="upcoming" className="w-full p-[16px] lg:p-[64px]">
         <div className="bg-[#161616] p-[32px] rounded-[8px]">
-          <div className="py-8 w-full flex justify-between items-center">
+          <div className="py-[16px] w-full flex justify-between items-center">
             <h1 className="text-[20px] md:text-[32px] font-outfit">Upcoming</h1>
             <Link
               href="/pages/upcomingMovies"
@@ -50,7 +54,7 @@ export default function Home() {
       </div>
       <div id="upcoming" className="w-full p-[16px] lg:p-[64px]">
         <div className="bg-[#161616] p-[32px] rounded-[8px]">
-          <div className="py-8 w-full flex justify-between items-center gap-2">
+          <div className="py-[16px] w-full flex justify-between items-center gap-2">
             <h1 className="text-[20px] md:text-[32px] font-outfit">Tv shows</h1>
             <Link
               href="/pages/tvshows"
@@ -64,7 +68,7 @@ export default function Home() {
       </div>
       <div id="upcoming" className="w-full p-[16px] lg:p-[64px]">
         <div className="bg-[#161616] p-[32px] rounded-[8px]">
-          <div className="py-8 w-full flex justify-between items-center gap-2">
+          <div className="py-[16px] w-full flex justify-between items-center gap-2">
             <h1 className="text-[20px] md:text-[32px] font-outfit">
               Popular movies
             </h1>
@@ -80,7 +84,7 @@ export default function Home() {
       </div>
       <div id="upcoming" className="w-full p-[16px] lg:p-[64px]">
         <div className="bg-[#161616] p-[32px] rounded-[8px]">
-          <div className="py-8 w-full flex justify-between items-center gap-2">
+          <div className="py-[16px] w-full flex justify-between items-center gap-2">
             <h1 className="text-[20px] md:text-[32px] font-outfit">
               Top rated movies
             </h1>

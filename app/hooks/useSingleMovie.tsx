@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import getSingleMovie from 'services/getSingleMovie'
 
-export function useSingleMovie({ id }): {} {
+export function useSingleMovie({ id }) {
   const [singleMovie, setSingleMovie] = useState([])
 
   useEffect(
@@ -20,5 +20,5 @@ export function useSingleMovie({ id }): {} {
 export const hoursConvert = (num: number) => {
   let hours = Math.floor(num / 60)
   let minutes = num % 60
-  return hours + 'h' + ' ' + minutes + 'min'
+  return hours + ' h' + ' ' + minutes + ' min'
 }

@@ -1,13 +1,9 @@
 'use client'
+import { Props } from 'interfaces/services.d'
 import { useState, useEffect } from 'react'
 import getMovies from 'services/getMovies'
 
-interface Props {
-  category: string
-  page: number
-}
-
-export function useMovies({ category, page = 1 }: Props) {
+export function useMovies({ category, page }: Props) {
   const [movies, setMovies] = useState([])
   const [loading, setLoading] = useState(false)
 

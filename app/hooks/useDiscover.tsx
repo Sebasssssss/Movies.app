@@ -1,21 +1,21 @@
 'use client'
 import getDiscover from '@/services/getDiscover'
+import { Props } from 'interfaces/services.d'
 import { useState, useEffect } from 'react'
 
-export function useDiscover() {
+export function useDiscover({ category, sort }: Props) {
   const [movies, setMovies] = useState([])
   const [loading, setLoading] = useState(false)
 
   useEffect(
     function () {
       setLoading(true)
-      getDiscover().then(movie => {
+      getDiscover({ category, sort }).then(movie => {
         setLoading(false)
         setMovies(movie)
       })
     },
-    [setMovies]
+    [setMovies, category, sort]
   )
-
   return { movies, loading }
 }
