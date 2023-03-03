@@ -1,4 +1,4 @@
-import { apiTypes } from 'interfaces/movie'
+import { apiTypes } from 'interfaces/movie.d'
 import Card from './Card'
 
 export default function ListOfCards({ movies }) {

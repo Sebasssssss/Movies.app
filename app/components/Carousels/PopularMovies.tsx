@@ -1,15 +1,17 @@
 'use client'
+import React from 'react'
 import Loader from '../Loader'
 import Carousel from '../Carousel'
 import Card from '../Card'
+import Link from 'next/link'
+import { IoChevronForward } from 'react-icons/io5'
 import { SwiperSlide } from 'swiper/react'
 import { useMovies } from '@/hooks/useMovies'
 import { apiTypes } from 'interfaces/movie.d'
-import Link from 'next/link'
-import { IoChevronForward } from 'react-icons/io5'
 
-export default function PopularCarousel() {
+function PopularCarousel() {
   const { movies, loading } = useMovies({ category: 'popular' })
+
   return loading ? (
     <div className="w-full grid place-items-center">
       <Loader />
@@ -46,3 +48,5 @@ export default function PopularCarousel() {
     </div>
   )
 }
+
+export default React.memo(PopularCarousel)

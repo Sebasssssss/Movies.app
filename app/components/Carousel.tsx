@@ -1,9 +1,10 @@
+import React from 'react'
 import { Swiper } from 'swiper/react'
 import { Navigation } from 'swiper'
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/css/navigation'
 
-export default function Carousel({ children }) {
+function Carousel({ children }) {
   return (
     <Swiper
       loop={true}
@@ -44,3 +45,5 @@ export default function Carousel({ children }) {
     </Swiper>
   )
 }
+
+export default React.memo(Carousel)

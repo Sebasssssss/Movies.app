@@ -1,9 +1,9 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import { apiTypes } from 'interfaces/movie'
+import { apiTypes } from 'interfaces/movie.d'
 import { useState } from 'react'
-import { IoPlay, IoStar } from 'react-icons/io5'
+import { IoStar } from 'react-icons/io5'
 
 export default function Card({
   adult,

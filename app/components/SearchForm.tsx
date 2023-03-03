@@ -1,23 +1,26 @@
 'use client'
-import { useRef, useState } from 'react'
+import React, { useRef, useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { FiSearch } from 'react-icons/fi'
 
-export default function SearchForm() {
+function SearchForm() {
   const [keyword, setKeyword] = useState('')
   const router = useRouter()
   const ref = useRef<HTMLInputElement>(null)
 
-  const handleSubmit = e => {
-    e.preventDefault()
-    if (keyword == '') return null
-    router.push(`/pages/search/${keyword}`)
-    ref.current.blur()
-  }
+  const handleSubmit = useCallback(
+    e => {
+      e.preventDefault()
+      if (keyword == '') return null
+      router.push(`/pages/search/${keyword}`)
+      ref.current.blur()
+    },
+    [keyword, router]
+  )
 
-  const handleChange = e => {
+  const handleChange = useCallback(e => {
     setKeyword(e.target.value)
-  }
+  }, [])
 
   return (
     <form
@@ -37,3 +40,5 @@ export default function SearchForm() {
     </form>
   )
 }
+
+export default React.memo(SearchForm)
