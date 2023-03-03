@@ -19,7 +19,7 @@ export default function PopularCarousel() {
       <div className="bg-[#161616] p-[32px] rounded-[8px]">
         <div className="py-[16px] w-full flex justify-between items-center gap-2">
           <h1 className="text-[20px] md:text-[32px] font-outfit">
-            Top rated movies
+            Popular Movies
           </h1>
           <Link
             href="/pages/popularMovies"
@@ -28,7 +28,7 @@ export default function PopularCarousel() {
             See more <IoChevronForward className="mt-0.5" />
           </Link>
         </div>
-        <Carousel to="/pages/popularMovies">
+        <Carousel>
           {movies.map((props: apiTypes) => (
             <SwiperSlide key={props.id}>
               <Card
