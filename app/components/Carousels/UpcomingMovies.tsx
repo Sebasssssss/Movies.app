@@ -18,7 +18,9 @@ export default function UpcomingCarousel() {
     <div className="w-full p-[16px] lg:p-[64px]">
       <div className="bg-[#161616] p-[32px] rounded-[8px]">
         <div className="py-[16px] w-full flex justify-between items-center">
-          <h1 className="text-[20px] md:text-[32px] font-outfit">Upcoming</h1>
+          <h1 className="text-[20px] md:text-[32px] font-outfit">
+            Upcoming Movies
+          </h1>
           <Link
             href="/pages/upcomingMovies"
             className="py-[8px] px-[16px] md:py-[15px] md:px-[30px] font-outfit bg-primary inline-flex items-center gap-1 rounded-[8px] text-[20px] hover:bg-primary/70 active:scale-[0.95] transition-all duration-300"

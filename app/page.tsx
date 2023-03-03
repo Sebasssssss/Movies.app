@@ -2,8 +2,9 @@ import UpcomingCarousel from './components/Carousels/UpcomingMovies'
 import PopularCarousel from './components/Carousels/PopularMovies'
 import TrendingCarousel from './components/Carousels/TrendingMovies'
 import SortedCarousel from './components/Carousels/SortedMovies'
-import { IoArrowDown } from 'react-icons/io5'
 import ShowCarousel from './components/ShowCarousel'
+import SortedTvShows from './components/Carousels/SortedTvshows'
+import { IoArrowDown } from 'react-icons/io5'
 
 export default function Home() {
   return (
@@ -35,8 +36,9 @@ export default function Home() {
         </div>
       </main>
       <SortedCarousel />
-      <ShowCarousel />
+      <SortedTvShows />
       <UpcomingCarousel />
+      <ShowCarousel />
       <PopularCarousel />
       <TrendingCarousel />
     </>

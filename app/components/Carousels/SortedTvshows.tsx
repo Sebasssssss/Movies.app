@@ -9,12 +9,12 @@ import { useDiscover } from '@/hooks/useDiscover'
 import { IoChevronDown } from 'react-icons/io5'
 import { menuItems } from 'components/MenuItems'
 
-export default function SortedCarousel() {
+export default function SortedTvShows() {
   const [sort, setSort] = useState('popularity.desc')
   const [active, setActive] = useState(false)
 
   const { movies, loading } = useDiscover({
-    category: 'movie',
+    category: 'tv',
     sort: sort
   })
 
@@ -27,10 +27,10 @@ export default function SortedCarousel() {
       <Loader />
     </div>
   ) : (
-    <div id="upcoming" className="w-full p-[16px] lg:p-[64px]">
+    <div className="w-full p-[16px] lg:p-[64px]">
       <div className="bg-[#161616] p-[32px] rounded-[8px]">
         <div className="py-[16px] w-full flex justify-between items-center">
-          <h1 className="text-[20px] md:text-[32px] font-outfit">Movies</h1>
+          <h1 className="text-[20px] md:text-[32px] font-outfit">Tv shows</h1>
           <div className="relative group">
             <button
               onClick={handleClick}
