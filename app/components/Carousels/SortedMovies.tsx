@@ -7,39 +7,7 @@ import { SwiperSlide } from 'swiper/react'
 import { apiTypes } from 'interfaces/movie.d'
 import { useDiscover } from '@/hooks/useDiscover'
 import { IoChevronDown } from 'react-icons/io5'
-
-export const menuItems = [
-  {
-    id: 'popularity.asc',
-    label: 'Popularity',
-    sort: 'asc'
-  },
-  {
-    id: 'popularity.desc',
-    label: 'Popularity',
-    sort: 'desc'
-  },
-  {
-    id: 'release_date.asc',
-    label: 'Release date',
-    sort: 'asc'
-  },
-  {
-    id: 'release_date.desc',
-    label: 'Release date',
-    sort: 'desc'
-  },
-  {
-    id: 'vote_average.asc',
-    label: 'Vote average',
-    sort: 'asc'
-  },
-  {
-    id: 'vote_average.desc',
-    label: 'Vote average',
-    sort: 'desc'
-  }
-]
+import { menuItems } from 'components/MenuItems'
 
 export default function SortedCarousel() {
   const [sort, setSort] = useState('')
