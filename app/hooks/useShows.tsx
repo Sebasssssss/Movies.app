@@ -2,14 +2,18 @@
 import getTvShow from '@/services/getTvShow'
 import { useState, useEffect } from 'react'
 
-export default function useShows() {
+type Category = {
+  category: string
+}
+
+export default function useShows({ category }: Category) {
   const [shows, setShows] = useState([])
 
   useEffect(
     function () {
-      getTvShow().then(show => setShows(show))
+      getTvShow({ category }).then(show => setShows(show))
     },
-    [setShows]
+    [setShows, category]
   )
 
   return { shows }

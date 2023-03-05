@@ -1,7 +1,7 @@
 'use client'
+import getMovies from '@/services/getMovies'
 import { Props } from 'interfaces/services.d'
 import { useState, useEffect } from 'react'
-import getMovies from 'services/getMovies'
 
 export function useMovies({ category, page }: Props) {
   const [movies, setMovies] = useState([])

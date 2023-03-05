@@ -19,11 +19,11 @@ function Carousel({ children }) {
           spaceBetween: 40
         },
         '640': {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 40
         },
         '768': {
-          slidesPerView: 3,
+          slidesPerView: 4,
           spaceBetween: 20
         },
         '1000': {

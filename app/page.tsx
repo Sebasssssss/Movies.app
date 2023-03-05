@@ -1,19 +1,21 @@
-import UpcomingCarousel from './components/Carousels/UpcomingMovies'
-import PopularCarousel from './components/Carousels/PopularMovies'
-import TrendingCarousel from './components/Carousels/TrendingMovies'
-import SortedCarousel from './components/Carousels/SortedMovies'
-import SortedTvShows from './components/Carousels/SortedTvshows'
-import ShowCarousel from './components/Carousels/TvShowsCar'
+import PopularMovies from './components/Carousels/Movies/PopularMovies'
+import SortedCarousel from './components/Carousels/Movies/SortedMovies'
+import TrendingCarousel from './components/Carousels/Movies/TrendingMovies'
+import UpcomingCarousel from './components/Carousels/Movies/UpcomingMovies'
+import SortedTvShows from './components/Carousels/TvShows/SortedTvshows'
+import ShowCarousel from './components/Carousels/TvShows/TvShowsCar'
+import MainVideo from './components/MainVideo'
 import { IoArrowDown } from 'react-icons/io5'
 
 export default function Home() {
   return (
     <>
-      <main className="h-[100vh] grid items-center w-full bg-[url('../public/homepage1.png')] bg-cover bg-center">
-        <div className="w-full bg-[#060606]/50 bg-gradient-to-t from-[#060606] to-transparent">
+      <main className="grid items-center w-full relative">
+        <MainVideo />
+        <div className="w-full bg-[#060606]/50 bg-gradient-to-t from-[#060606] to-transparent z-10">
           <div className="w-full py-[128px]  h-[100vh] grid items-center justify-center">
             <div className="text-justify grid gap-[32px] w-full lg:w-[719px]">
-              <div className="grid gap-[16px] text-center font-outfit">
+              <div className="grid gap-[16px] text-center font-outfitz">
                 <h1 className="text-[96px]">Cinema web app</h1>
                 <p className="text-[16px] opacity-70">
                   This web app is made with the TMDB API. Feel free to look for
@@ -39,7 +41,7 @@ export default function Home() {
       <SortedTvShows />
       <UpcomingCarousel />
       <ShowCarousel />
-      <PopularCarousel />
+      <PopularMovies />
       <TrendingCarousel />
     </>
   )

@@ -2,17 +2,22 @@
 import { useEffect, useState } from 'react'
 import searchMovies from 'services/searchMovies'
 
-export function useSearch({ keyword }) {
+interface Props {
+  keyword: string
+  page: number
+}
+
+export function useSearch({ keyword, page = 1 }: Props) {
   const [movies, setMovies] = useState([])
   const [error, setError] = useState(false)
 
   useEffect(
     function () {
-      searchMovies({ keyword })
+      searchMovies({ keyword, page })
         .then(movie => setMovies(movie))
         .catch(() => setError(true))
     },
-    [keyword]
+    [keyword, page]
   )
 
   return { movies, error }

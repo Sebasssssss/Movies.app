@@ -1,6 +1,6 @@
 'use client'
+import getSingleMovie from '@/services/getSingleMovie'
 import { useEffect, useState } from 'react'
-import getSingleMovie from 'services/getSingleMovie'
 
 export function useSingleMovie({ id }) {
   const [singleMovie, setSingleMovie] = useState([])
