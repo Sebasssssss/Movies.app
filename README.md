@@ -4,7 +4,7 @@
 
 ## Stack
 - [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
-- [Typescript](https://chakra-ui.com/) - A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
+- [Typescript](https://www.typescriptlang.org/) - A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces
 
 ## Project structure
