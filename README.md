@@ -1,14 +1,11 @@
-# Sebass's Homepage
+# Cinema web app
 
-![imagen](https://user-images.githubusercontent.com/105828786/216289897-fb7cb2af-5329-4393-9dc7-568b272451e7.png)
-
+![readme](https://user-images.githubusercontent.com/105828786/222939177-113f2954-d6b0-4543-aa19-c00636e96831.png)
 
 ## Stack
-
+- [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
+- [Typescript](https://chakra-ui.com/) - A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces
-- [Chakra UI](https://chakra-ui.com/) - A simple, modular and accessible component library for React
-- [Three.js](https://threejs.org/) - 3D library for JavaScript
-- [Framer Motion](https://www.framer.com/motion/) - An animation library for React
 
 ## Project structure
 
@@ -19,7 +16,7 @@ $PROJECT_ROOT
 │   # React component files
 ├── components
 │   # Services
-├── emailjs
+├── Api's data
 │   # Static files for images and 3d model file
 └── public
 ```
@@ -27,11 +24,6 @@ $PROJECT_ROOT
 ## License
 
 MIT License.
-
-This project is not originally mine, it's a copy of devaslife portfolio homepage, so you can create your own without notifying me under the following conditions:
-
-- Delete the images used in this project
-- Do not use the 3d panda model
 
 Check out [LICENSE](./LICENSE) for more detail.
 
