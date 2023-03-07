@@ -9,10 +9,8 @@ export default function useSuggestions() {
   const router = useRouter()
   const { movies } = useMovies({ category: 'popular' })
 
-  const listmovies = movies.map(movie => {
-    return movie
-  })
-  const titles = listmovies.map(({ title }) => title)
+  const listMovies = movies.map(movie => movie)
+  const titles = listMovies.map(({ title }) => title)
 
   const handleSubmit = useCallback(
     (e: React.SyntheticEvent) => {

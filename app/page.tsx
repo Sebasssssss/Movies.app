@@ -2,7 +2,6 @@ import PopularMovies from './components/Carousels/Movies/PopularMovies'
 import SortedCarousel from './components/Carousels/Movies/SortedMovies'
 import TrendingCarousel from './components/Carousels/Movies/TrendingMovies'
 import UpcomingCarousel from './components/Carousels/Movies/UpcomingMovies'
-import SortedTvShows from './components/Carousels/TvShows/SortedTvshows'
 import ShowCarousel from './components/Carousels/TvShows/TvShowsCar'
 import MainVideo from './components/MainVideo'
 import { IoArrowDown } from 'react-icons/io5'
@@ -38,9 +37,8 @@ export default function Home() {
         </div>
       </main>
       <SortedCarousel />
-      <SortedTvShows />
-      <UpcomingCarousel />
       <ShowCarousel />
+      <UpcomingCarousel />
       <PopularMovies />
       <TrendingCarousel />
     </>

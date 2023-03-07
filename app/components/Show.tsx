@@ -21,7 +21,7 @@ export default function Show({
         href={`/pages/show/${id}`}
         className="w-[180px] h-[250px] rounded-[8px] group grid relative place-items-center overflow-hidden shadow-lg transition duration-500 ease-out hover:translate-y-[5%]"
       >
-        <div key={adult} className="w-full h-full rounded-[8px]">
+        <div className="w-full h-full rounded-[8px]">
           <Image
             src={`https://image.tmdb.org/t/p/w500${poster_path}`}
             alt=""
