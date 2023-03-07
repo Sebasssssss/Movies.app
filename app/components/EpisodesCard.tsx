@@ -15,18 +15,33 @@ export default function EpisodesCard({
     <>
       <div className="w-[250px] h-[180px] rounded-[8px] group grid relative place-items-center overflow-hidden shadow-lg transition duration-500 ease-out hover:translate-y-[5%]">
         <div className="w-full h-full rounded-[8px]">
-          <Image
-            src={`https://image.tmdb.org/t/p/w500${still_path}`}
-            alt=""
-            fill
-            sizes="(max-width: 768px) 100vw,
+          {still_path === null ? (
+            <Image
+              src="/notfound1.jpg"
+              alt=""
+              fill
+              sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
-            className={`${
-              isLoading ? 'grayscale blur-md' : 'grayscale-0 blur-0'
-            } duration-700 ease-in-out group-hover:blur-md`}
-            onLoadingComplete={() => setIsLoading(false)}
-          />
+              className={`${
+                isLoading ? 'grayscale blur-md' : 'grayscale-0 blur-0'
+              } duration-700 ease-in-out group-hover:blur-md`}
+              onLoadingComplete={() => setIsLoading(false)}
+            />
+          ) : (
+            <Image
+              src={`https://image.tmdb.org/t/p/w500${still_path}`}
+              alt=""
+              fill
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+              className={`${
+                isLoading ? 'grayscale blur-md' : 'grayscale-0 blur-0'
+              } duration-700 ease-in-out group-hover:blur-md`}
+              onLoadingComplete={() => setIsLoading(false)}
+            />
+          )}
           <div className="z-10 text-white flex flex-col justify-between opacity-0 translate-y-[25%] group-hover:opacity-100 group-hover:translate-y-0 text-left w-full h-full px-6 py-2 bg-black/60 transition duration-500">
             <div className="flex flex-col gap-2">
               <h1 className="text-md w-full py-1 font-outfit">{name}</h1>

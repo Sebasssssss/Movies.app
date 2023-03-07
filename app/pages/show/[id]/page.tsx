@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import ListOfGenres from '@/components/ListOfGenres'
 import { useSingleShow } from '@/hooks/useSingleShow'
-import EpisodesCarousel from '@/components/Carousels/TvShows/EpisodesCarousel'
+import Episodes from '@/components/Carousels/TvShows/Episodes'
 
 export default function Page({ params }) {
   const { id } = params
@@ -47,7 +47,7 @@ export default function Page({ params }) {
         </div>
       </div>
       <div className="block w-full">
-        <EpisodesCarousel id={id} />
+        <Episodes id={id} />
       </div>
     </main>
   )
