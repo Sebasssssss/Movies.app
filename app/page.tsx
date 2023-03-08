@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <main className="grid items-center w-full relative">
         <MainVideo />
-        <div className="w-full bg-[#060606]/50 bg-gradient-to-t from-[#060606] to-transparent z-10">
+        <div className="w-full  bg-gradient-to-t from-[#0c0c0c] to-transparent z-10">
           <div className="w-full py-[128px]  h-[100vh] grid items-center justify-center">
             <div className="text-justify grid gap-[32px] w-full lg:w-[719px]">
               <div className="grid gap-[16px] text-center font-outfit">

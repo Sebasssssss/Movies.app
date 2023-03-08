@@ -25,7 +25,7 @@ function PopularShows() {
             See more <IoChevronForward className="mt-0.5" />
           </Link>
         </div>
-        <Carousel>
+        <Carousel slidesPerView={8}>
           {shows.map((props: apiTypes) => (
             <SwiperSlide key={props.id}>
               <Movie

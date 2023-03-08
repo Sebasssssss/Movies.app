@@ -19,7 +19,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-[#060606] text-white">
+      <body className="bg-[#0c0c0c] text-white">
         <Navbar />
         <div>{children}</div>
         <Footer />

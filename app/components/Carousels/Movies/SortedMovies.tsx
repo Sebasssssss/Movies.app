@@ -58,7 +58,7 @@ export default function SortedCarousel() {
             </ul>
           </div>
         </div>
-        <Carousel>
+        <Carousel slidesPerView={8}>
           {movies.map((props: apiTypes) => (
             <SwiperSlide key={props.id}>
               <Movie

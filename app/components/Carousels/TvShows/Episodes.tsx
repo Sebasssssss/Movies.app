@@ -25,7 +25,7 @@ export default function Episodes({ id, number_of_seasons }: Props) {
             setSeason={setSeason}
           />
         </div>
-        <Carousel>
+        <Carousel slidesPerView={6}>
           {episodes.episodes
             ?.map(episode => {
               return (

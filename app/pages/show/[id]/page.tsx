@@ -1,8 +1,9 @@
 'use client'
 import Image from 'next/image'
 import ListOfGenres from '@/components/ListOfGenres'
-import { useSingleShow } from '@/hooks/useSingleShow'
 import Episodes from '@/components/Carousels/TvShows/Episodes'
+import SimilarShowCar from '@/components/Carousels/TvShows/SimilarShow'
+import { useSingleShow } from '@/hooks/useSingleShow'
 
 export default function Page({ params }) {
   const { id } = params
@@ -48,6 +49,7 @@ export default function Page({ params }) {
       </div>
       <div className="block w-full">
         <Episodes id={id} number_of_seasons={singleShow.number_of_seasons} />
+        <SimilarShowCar id={id} />
       </div>
     </main>
   )

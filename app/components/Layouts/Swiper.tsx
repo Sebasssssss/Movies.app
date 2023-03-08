@@ -4,7 +4,7 @@ import { Navigation } from 'swiper'
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/css/navigation'
 
-function Carousel({ children }) {
+function Carousel({ children, slidesPerView }) {
   return (
     <Swiper
       loop={true}
@@ -35,7 +35,7 @@ function Carousel({ children }) {
           spaceBetween: 50
         },
         '1420': {
-          slidesPerView: 6,
+          slidesPerView: slidesPerView,
           spaceBetween: 50
         }
       }}

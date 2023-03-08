@@ -8,7 +8,7 @@ import { useSimilar } from '@/hooks/useSimilar'
 export default function SimilarMovieCar({ id }) {
   const { similar } = useSimilar({ category: 'movie', id })
   return (
-    <Carousel>
+    <Carousel slidesPerView={8}>
       {similar.map((props: apiTypes) => (
         <SwiperSlide key={props.id}>
           <Movie

@@ -18,13 +18,13 @@ export default function MainVideo() {
         <source src="/mainvideo.mp4" />
       </video>
       <button
-        className="absolute bottom-10 right-10 z-20"
+        className="absolute bottom-10 right-10 z-20 text-zinc-700 hover:text-zinc-300/40 active:text-zinc-200 transition-colors duration-200"
         onClick={handleMuted}
       >
         {muted ? (
-          <IoVolumeMuteOutline className="w-10 h-auto text-zinc-700" />
+          <IoVolumeMuteOutline className="w-10 h-auto" />
         ) : (
-          <IoVolumeHighOutline className="w-10 h-auto text-zinc-700" />
+          <IoVolumeHighOutline className="w-10 h-auto" />
         )}
       </button>
     </div>

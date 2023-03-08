@@ -28,7 +28,7 @@ export default function UpcomingCarousel() {
             See more <IoChevronForward className="mt-0.5" />
           </Link>
         </div>
-        <Carousel>
+        <Carousel slidesPerView={8}>
           {movies.map((props: apiTypes) => (
             <SwiperSlide key={props.id}>
               <Movie
