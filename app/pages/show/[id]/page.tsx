@@ -47,7 +47,7 @@ export default function Page({ params }) {
         </div>
       </div>
       <div className="block w-full">
-        <Episodes id={id} />
+        <Episodes id={id} number_of_seasons={singleShow.number_of_seasons} />
       </div>
     </main>
   )

@@ -1,5 +1,5 @@
 'use client'
-import Carousel from '@/components/Carousel'
+import Carousel from 'components/Layouts/Swiper'
 import Show from '@/components/Show'
 import { SwiperSlide } from 'swiper/react'
 import { Shows } from '@/interfaces/shows.d'

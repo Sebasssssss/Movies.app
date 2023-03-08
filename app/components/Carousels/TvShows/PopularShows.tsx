@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import Carousel from '@/components/Carousel'
+import Carousel from 'components/Layouts/Swiper'
 import Movie from '@/components/Movie'
 import { IoChevronForward } from 'react-icons/io5'
 import { SwiperSlide } from 'swiper/react'

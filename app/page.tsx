@@ -14,7 +14,7 @@ export default function Home() {
         <div className="w-full bg-[#060606]/50 bg-gradient-to-t from-[#060606] to-transparent z-10">
           <div className="w-full py-[128px]  h-[100vh] grid items-center justify-center">
             <div className="text-justify grid gap-[32px] w-full lg:w-[719px]">
-              <div className="grid gap-[16px] text-center font-outfitz">
+              <div className="grid gap-[16px] text-center font-outfit">
                 <h1 className="text-[96px]">Cinema web app</h1>
                 <p className="text-[16px] opacity-70">
                   This web app is made with the TMDB API. Feel free to look for

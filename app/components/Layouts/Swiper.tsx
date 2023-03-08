@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import { Swiper } from 'swiper/react'
 import { Navigation } from 'swiper'
@@ -20,23 +19,23 @@ function Carousel({ children }) {
           spaceBetween: 40
         },
         '640': {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 40
         },
         '768': {
-          slidesPerView: 4,
+          slidesPerView: 2,
           spaceBetween: 20
         },
         '1000': {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 40
         },
         '1250': {
-          slidesPerView: 5,
+          slidesPerView: 4,
           spaceBetween: 50
         },
         '1420': {
-          slidesPerView: 8,
+          slidesPerView: 6,
           spaceBetween: 50
         }
       }}

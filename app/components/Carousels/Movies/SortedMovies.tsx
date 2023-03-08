@@ -1,7 +1,7 @@
 'use client'
 import { useState, useCallback } from 'react'
 import Loader from '@/components/Loader'
-import Carousel from '@/components/Carousel'
+import Carousel from 'components/Layouts/Swiper'
 import Movie from '@/components/Movie'
 import { SwiperSlide } from 'swiper/react'
 import { apiTypes } from 'interfaces/movie.d'
