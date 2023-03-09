@@ -1,9 +1,19 @@
 'use client'
 import getSingleMovie from '@/services/getSingleMovie'
+import { Props } from 'interfaces/services.d'
 import { useEffect, useState } from 'react'
 
-export function useSingleMovie({ id }) {
-  const [singleMovie, setSingleMovie] = useState([])
+interface Event {
+  runtime: number | undefined
+  title: string | undefined
+  poster_path: string | undefined
+  overview: string | undefined
+  release_date: string | undefined
+  genres: string | number | undefined
+}
+
+export function useSingleMovie({ id }: Props) {
+  const [singleMovie, setSingleMovie] = useState<Event | []>([])
 
   useEffect(
     function () {

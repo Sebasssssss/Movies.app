@@ -7,7 +7,7 @@ const fetchSingleMovie = async (id: Props) => {
   return fetch(apiUrl).then(res => res.json())
 }
 
-export default async function getSingleMovie({ id }) {
+export default async function getSingleMovie({ id }: any) {
   const {
     runtime,
     title,

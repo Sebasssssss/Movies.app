@@ -7,8 +7,12 @@ interface Props {
   seasonNumber: number
 }
 
+interface Event {
+  episodes: any
+}
+
 export function useTvEpisodes({ id, seasonNumber }: Props) {
-  const [episodes, setEpisodes] = useState([])
+  const [episodes, setEpisodes] = useState<Event | []>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(

@@ -1,5 +1,5 @@
 'use client'
-import { useState, useCallback } from 'react'
+import React, { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useMovies } from './useMovies'
 
@@ -22,7 +22,7 @@ export default function useSuggestions() {
   )
 
   const handleChange = useCallback(
-    e => {
+    (e: React.ChangeEvent<HTMLInputElement>) => {
       setKeyword(e.target.value)
       let matches: string[] = []
 
@@ -37,7 +37,7 @@ export default function useSuggestions() {
     [titles]
   )
 
-  const handleSuggestion = useCallback(prop => {
+  const handleSuggestion = useCallback((prop: any) => {
     setKeyword(prop)
     setSuggestions([])
   }, [])

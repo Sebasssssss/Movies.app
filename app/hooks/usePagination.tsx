@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 export default function usePagination() {
-  const [page, setPage] = useState(1)
+  const [page, setPage] = useState<any>(1)
   const [nextPage, setNextPage] = useState(page)
   const [prevPage, setPrevPage] = useState(page)
 

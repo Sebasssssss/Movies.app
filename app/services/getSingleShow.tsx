@@ -7,7 +7,7 @@ const fetchSingleMovie = async (id: Props) => {
   return fetch(apiUrl).then(res => res.json())
 }
 
-export default async function getSingleShow({ id }) {
+export default async function getSingleShow({ id }: any) {
   const {
     name,
     poster_path,
