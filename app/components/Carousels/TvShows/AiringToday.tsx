@@ -4,8 +4,8 @@ import Show from '@/components/Show'
 import useShows from '@/hooks/useShows'
 import Link from 'next/link'
 import { SwiperSlide } from 'swiper/react'
-import { apiTypes } from 'interfaces/movie.d'
 import { IoChevronForward } from 'react-icons/io5'
+import { Shows } from '@/interfaces/shows.d'
 
 export default function AiringToday() {
   const { shows } = useShows({ category: 'airing_today' })
@@ -24,7 +24,7 @@ export default function AiringToday() {
           </Link>
         </div>
         <Carousel slidesPerView={8}>
-          {shows.map((props: apiTypes) => (
+          {shows.map((props: Shows) => (
             <SwiperSlide key={props.id}>
               <Show
                 adult={props.adult}

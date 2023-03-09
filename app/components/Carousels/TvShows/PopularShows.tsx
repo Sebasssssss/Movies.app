@@ -1,12 +1,12 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
+import Show from '@/components/Show'
 import Carousel from 'components/Layouts/Swiper'
-import Movie from '@/components/Movie'
+import useShows from '@/hooks/useShows'
+import { Shows } from '@/interfaces/shows.d'
 import { IoChevronForward } from 'react-icons/io5'
 import { SwiperSlide } from 'swiper/react'
-import { apiTypes } from 'interfaces/movie.d'
-import useShows from '@/hooks/useShows'
 
 function PopularShows() {
   const { shows } = useShows({ category: 'popular' })
@@ -26,9 +26,9 @@ function PopularShows() {
           </Link>
         </div>
         <Carousel slidesPerView={8}>
-          {shows.map((props: apiTypes) => (
+          {shows.map((props: Shows) => (
             <SwiperSlide key={props.id}>
-              <Movie
+              <Show
                 adult={props.adult}
                 id={props.id}
                 name={props.name}

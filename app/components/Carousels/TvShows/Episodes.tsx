@@ -12,7 +12,7 @@ interface Props {
 }
 
 export default function Episodes({ id, number_of_seasons }: Props) {
-  const [season, setSeason] = useState<number>(1)
+  const [season, setSeason] = useState(1)
   const { episodes } = useTvEpisodes({ id: id, seasonNumber: season })
 
   return (

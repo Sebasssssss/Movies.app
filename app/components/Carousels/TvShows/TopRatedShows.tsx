@@ -1,11 +1,11 @@
 'use client'
 import Carousel from 'components/Layouts/Swiper'
-import Show from '@/components/Show'
-import { SwiperSlide } from 'swiper/react'
-import { apiTypes } from 'interfaces/movie.d'
-import useShows from '@/hooks/useShows'
 import Link from 'next/link'
+import Show from '@/components/Show'
+import useShows from '@/hooks/useShows'
+import { SwiperSlide } from 'swiper/react'
 import { IoChevronForward } from 'react-icons/io5'
+import { Shows } from '@/interfaces/shows.d'
 
 export default function TopRatedShows() {
   const { shows } = useShows({ category: 'top_rated' })
@@ -24,7 +24,7 @@ export default function TopRatedShows() {
           </Link>
         </div>
         <Carousel slidesPerView={8}>
-          {shows.map((props: apiTypes) => (
+          {shows.map((props: Shows) => (
             <SwiperSlide key={props.id}>
               <Show
                 adult={props.adult}
