@@ -36,8 +36,8 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <SortedCarousel />
       <ShowCarousel />
+      <SortedCarousel />
       <UpcomingCarousel />
       <PopularMovies />
       <TrendingCarousel />

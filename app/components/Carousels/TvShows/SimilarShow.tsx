@@ -14,7 +14,7 @@ export default function SimilarShowCar({ id }) {
       <div className="bg-[#161616] p-[32px] rounded-[8px]">
         <div className="py-[16px] w-full flex justify-between items-center gap-2">
           <h1 className="text-[20px] md:text-[32px] font-outfit">
-            Tv shows going live today
+            Similar tv shows
           </h1>
           <Link
             href="/pages/tvshows"

@@ -4,8 +4,8 @@ import Show from '@/components/Show'
 import useShows from '@/hooks/useShows'
 import Link from 'next/link'
 import { SwiperSlide } from 'swiper/react'
-import { apiTypes } from 'interfaces/movie.d'
 import { IoChevronForward } from 'react-icons/io5'
+import { Shows } from '@/interfaces/shows.d'
 
 export default function AiringToday() {
   const { shows } = useShows({ category: 'airing_today' })
@@ -17,14 +17,14 @@ export default function AiringToday() {
             Tv shows going live today
           </h1>
           <Link
-            href="/pages/tvshows"
+            href="/pages/showslivetoday"
             className="py-[8px] px-[16px] md:py-[15px] md:px-[30px] font-outfit bg-primary inline-flex items-center gap-1 rounded-[8px] text-[20px] hover:bg-primary/70 active:scale-[0.95] transition-all duration-300"
           >
             See more <IoChevronForward className="mt-0.5" />
           </Link>
         </div>
         <Carousel slidesPerView={8}>
-          {shows.map((props: apiTypes) => (
+          {shows.map((props: Shows) => (
             <SwiperSlide key={props.id}>
               <Show
                 adult={props.adult}

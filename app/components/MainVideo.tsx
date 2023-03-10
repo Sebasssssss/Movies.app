@@ -15,7 +15,7 @@ export default function MainVideo() {
         playsInline
         muted={muted}
       >
-        <source src="/mainvideo.mp4" />
+        <source src="/homepage.mp4" />
       </video>
       <button
         className="absolute bottom-10 right-10 z-20 text-zinc-700 hover:text-zinc-300/40 active:text-zinc-200 transition-colors duration-200"

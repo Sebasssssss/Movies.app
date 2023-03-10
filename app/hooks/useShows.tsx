@@ -1,19 +1,16 @@
 'use client'
+import { Props } from '@/interfaces/services.d'
 import getTvShow from '@/services/getTvShow'
 import { useState, useEffect } from 'react'
 
-type Category = {
-  category: string
-}
-
-export default function useShows({ category }: Category) {
+export default function useShows({ category, page }: Props) {
   const [shows, setShows] = useState([])
 
   useEffect(
     function () {
-      getTvShow({ category }).then(show => setShows(show))
+      getTvShow({ category, page }).then(show => setShows(show))
     },
-    [setShows, category]
+    [setShows, category, page]
   )
 
   return { shows }
