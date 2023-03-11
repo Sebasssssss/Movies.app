@@ -44,7 +44,7 @@ export default function Page({ params }) {
         </div>
       </div>
       <div className="block w-full">
-        <h1 className="text-xl px-10 font-semibold font-outfit">
+        <h1 className="text-xl font-semibold font-outfit px-4">
           Similar movies
         </h1>
         <SimilarMovieCar id={params.id} />

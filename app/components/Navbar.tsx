@@ -14,7 +14,7 @@ export default function Navbar() {
         </Link>
         <SearchForm />
         <Link
-          href="https://github.com/Sebasssssss"
+          href="https://github.com/Sebasssssss/Movies.app"
           className="md:inline-flex items-center gap-2 hidden"
         >
           <IoLogoGithub /> Source
