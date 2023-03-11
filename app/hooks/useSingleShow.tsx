@@ -16,7 +16,7 @@ interface Event {
 }
 
 export function useSingleShow({ id }: Props) {
-  const [singleShow, setSingleShow] = useState<Event | []>([])
+  const [singleShow, setSingleShow] = useState<any | []>([])
 
   useEffect(
     function () {

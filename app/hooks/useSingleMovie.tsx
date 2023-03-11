@@ -13,7 +13,7 @@ interface Event {
 }
 
 export function useSingleMovie({ id }: Props) {
-  const [singleMovie, setSingleMovie] = useState<Event | []>([])
+  const [singleMovie, setSingleMovie] = useState<any | []>([])
 
   useEffect(
     function () {

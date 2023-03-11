@@ -1,8 +1,8 @@
 'use client'
 import ListOfMovies from 'components/ListOfMovies'
-import Pagination from '@/components/Pagination'
-import usePagination from '@/hooks/usePagination'
-import { useMovies } from '@/hooks/useMovies'
+import Pagination from 'components/Pagination'
+import usePagination from 'hooks/usePagination'
+import { useMovies } from 'hooks/useMovies'
 
 export default function Page() {
   const { page, handleNextPage, handlePrevPage } = usePagination()
