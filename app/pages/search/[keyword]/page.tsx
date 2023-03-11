@@ -1,5 +1,5 @@
 'use client'
-import ListOfCards from 'components/ListOfCards'
+import ListOfCards from 'components/ListOfMovies'
 import Pagination from '@/components/Pagination'
 import usePagination from '@/hooks/usePagination'
 import { useSearch } from 'hooks/useSearch'

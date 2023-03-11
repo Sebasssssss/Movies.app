@@ -17,7 +17,8 @@ export default async function getDiscover({ category, sort, page = 1 }: Props) {
           poster_path,
           release_date,
           vote_average,
-          genre_ids
+          genre_ids,
+          name
         } = movie
         return {
           adult,
@@ -26,7 +27,8 @@ export default async function getDiscover({ category, sort, page = 1 }: Props) {
           poster_path,
           release_date,
           vote_average,
-          genre_ids
+          genre_ids,
+          name
         }
       })
       return movies

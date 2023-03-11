@@ -10,10 +10,18 @@ export default async function searchMovies({ keyword, page }: Props) {
     .then(response => {
       const { results = [] } = response
       const movies = results.map((movie: apiTypes) => {
-        const { id, runtime, title, poster_path, release_date, vote_average } =
-          movie
+        const {
+          id,
+          runtime,
+          title,
+          poster_path,
+          release_date,
+          vote_average,
+          name
+        } = movie
         return {
           id,
+          name,
           title,
           runtime,
           poster_path,

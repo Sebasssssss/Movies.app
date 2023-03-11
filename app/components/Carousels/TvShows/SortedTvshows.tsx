@@ -4,10 +4,10 @@ import Loader from '@/components/Loader'
 import Carousel from 'components/Layouts/Swiper'
 import Show from '@/components/Show'
 import { SwiperSlide } from 'swiper/react'
-import { apiTypes } from 'interfaces/movie.d'
 import { useDiscover } from '@/hooks/useDiscover'
 import { IoChevronDown } from 'react-icons/io5'
 import { menuItems } from '@/const/MenuItems.d'
+import { Shows } from '@/interfaces/shows.d'
 
 export default function SortedTvShows() {
   const [sort, setSort] = useState('popularity.desc')
@@ -18,7 +18,7 @@ export default function SortedTvShows() {
     sort: sort
   })
 
-  const handleClick = useCallback(() => {
+  const handleSort = useCallback(() => {
     setActive(v => !v)
   }, [])
 
@@ -33,7 +33,7 @@ export default function SortedTvShows() {
           <h1 className="text-[20px] md:text-[32px] font-outfit">Tv shows</h1>
           <div className="relative group">
             <button
-              onClick={handleClick}
+              onClick={handleSort}
               className="py-[8px] px-[16px] md:py-[15px] md:px-[30px] font-outfit bg-primary inline-flex items-center gap-1 rounded-[8px] text-[20px] hover:bg-primary/70 active:scale-[0.95] transition-all duration-300"
             >
               Sort by <IoChevronDown className="mt-0.5" />
@@ -59,7 +59,7 @@ export default function SortedTvShows() {
           </div>
         </div>
         <Carousel slidesPerView={8}>
-          {movies.map((props: apiTypes) => (
+          {movies.map((props: Shows) => (
             <SwiperSlide key={props.id}>
               <Show
                 adult={props.adult}
